@@ -1,4 +1,4 @@
-<?php include "header/nav.php";?>
+<?php include "../header/nav.php";?>
 <?php 
 $id = $_GET['id'];
 if (isset($_POST['submit']))

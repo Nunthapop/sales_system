@@ -1,6 +1,6 @@
 <!--For admin-->
 <?php 
-include "header/nav.php"; ?>
+include "../header/nav.php"; ?>
 <!DOCTYPE html>
 
 <html lang="en">
@@ -49,7 +49,7 @@ include "header/nav.php"; ?>
 
 
             <?php } ?>
-
+                    <div><a href="create_prod.php">Create</a></div>
 
     </div>
 </body>

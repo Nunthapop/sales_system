@@ -1,5 +1,5 @@
 <?php 
-include "header/nav.php";
+include "../header/nav.php";
 $id = $_GET['id'];
 
 echo $id;

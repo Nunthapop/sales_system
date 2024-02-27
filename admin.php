@@ -1,4 +1,4 @@
-<?php include "header/nav.php";?>
+<?php include "config/config.php";?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,8 +11,12 @@
     <title>Sales_system</title>
 </head>
 <body>
-    <h1>Sales_system</h1>
-    
+    <h1>Sales_system Admin page</h1>
+    <div> Product<a href="Product/product.php">GO</a></div>
+    <div> Employee<a href="employee/employee.php">go</a></div>
+    <div> customer<a href="customer/customer.php">go</a></div>
+    <div> order<a href="order/order.php">go</a></div>
+
     
 
 </body>
