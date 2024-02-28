@@ -15,11 +15,11 @@ if (isset($_POST['submit']))
         die("something went wrong");
     }else{
     echo "Added Successful";
-    header("edit_emp.php");
+    header("location: emp.php");
 }
 
 
 }
 else
-header("location: edit_emp.php");
+header("location: emp.php");
 ?>

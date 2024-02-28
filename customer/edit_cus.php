@@ -17,10 +17,10 @@ echo $id;
 
 <body>
 
-<form action=" edit_emp_confirm.php?id=<?php echo $id?>" method="post">
+<form action=" edit_cus_confirm.php?id=<?php echo $id?>" method="post">
     <?php
     
-    $query = "SELECT * FROM employee where employee_id = $id";
+    $query = "SELECT * FROM customers join membership using (membership_id) where customers_id = $id";
     $result = mysqli_query($connect, $query); ?>
    <table>
             <tr>
@@ -36,9 +36,12 @@ echo $id;
 <!-- แก้ input type =text, value-->
                 <tr>
                
-                    <td><?php echo $row['employee_id']; ?></td>
-                    <td><input type="text" value="<?php echo $row['emp_name']; ?>" name="emp_name"></td>
-                    <td><input type="text" value="<?php echo $row['emp_position']; ?>" name="position"></td>
+                    <td><?php echo $row['customers_id']; ?></td>
+                    <td><input type="text" value="<?php echo $row['cus_first_name']; ?>" name="first_n"></td>
+                    <td><input type="text" value="<?php echo $row['cus_last_name']; ?>" name="last_n"></td>
+                    <td><input type="text" value="<?php echo $row['telephone']; ?>" name="telephone"></td>
+                    <td><input type="text" value="<?php echo $row['address']; ?>" name="address"></td>
+                    <td><input type="text" value="<?php echo $row['member_name']; ?>" name="member_name"></td>
                     <td><input type="submit" name="submit" value="save" >
                     <input type="reset" name="reset" value="CANCEL">
                 </tr> </td>
