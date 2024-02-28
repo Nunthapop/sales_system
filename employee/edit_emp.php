@@ -1,8 +1,11 @@
-<!--For admin-->
 <?php 
-include "../header/nav.php"; ?>
-<!DOCTYPE html>
+include "../header/nav.php";
+$id = $_GET['id'];
 
+echo $id;
+
+?>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,18 +13,16 @@ include "../header/nav.php"; ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/product.css">
     <title>Document</title>
-
 </head>
 
 <body>
-    <h1>emp-admin</h1>
 
-
-    <div class="main">
-        <?php
-        $query = "SELECT * FROM employee";
-        $result = mysqli_query($connect, $query); ?>
-        <table>
+<form action=" edit_emp_confirm.php?id=<?php echo $id?>" method="post">
+    <?php
+    
+    $query = "SELECT * FROM employee where employee_id = $id";
+    $result = mysqli_query($connect, $query); ?>
+   <table>
             <tr>
                 <th>ID</th>
                 <th>name</th>
@@ -32,21 +33,20 @@ include "../header/nav.php"; ?>
             <?php while ($row = mysqli_fetch_assoc($result)) { ?>
 
   
-
+<!-- แก้ input type =text, value-->
                 <tr>
+                <input type="text" value="<?php echo $row['emp_name']; ?>" name="emp_name">
                     <td><?php echo $row['employee_id']; ?></td>
                     <td><?php echo $row['emp_name']; ?></td>
                     <td><?php echo $row['emp_position']; ?></td>
-                    <td><div class="add"><a href="edit_emp.php?id=<?php echo$row['employee_id'];?>">GET IN</a></div></td>
+                    <input type="submit" name="submit" value="save" >
+                    <input type="reset" name="reset" value="CANCEL">
                 </tr>
 
 
 
-
-            <?php } ?>
-                    <div><a href="create_emp.php">Create</a></div>
-
-    </div>
+        <?php } ?>
+        </form>
 </body>
 
 </html>

@@ -13,10 +13,13 @@
 <body>
     hi
     <h1>Sales_system Admin page</h1>
-    <div> Product<a href="Product/product.php">GO</a></div>
-    <div> Employee<a href="employee/employee.php">go</a></div>
-    <div> customer<a href="customer/customer.php">go</a></div>
-    <div> order<a href="order/order.php">go</a></div>
+    <div> Product  <a href="Product/product.php"><button type="button" class="btn btn-primary btn-sm">GO</button></a></div>
+
+    <div> Employee  <a href="employee/employee.php"><button type="button" class="btn btn-primary btn-sm">GO</button></a></div>
+
+    <div> customer  <a href="customer/customer.php"><button type="button" class="btn btn-primary btn-sm">GO</button></a></div>
+    
+    <div> order  <a href="order/order.php"><button type="button" class="btn btn-primary btn-sm">GO</button></a></div>
 
     
 

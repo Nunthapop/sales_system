@@ -14,7 +14,7 @@ else{
 $query = "INSERT INTO product (product_name,product_description,product_price,amount,product_type) 
 VALUE('$name','$des','$price','$qty','$type')";
 
-
+    
     $result = mysqli_query($connect, $query);
     if(!$result){
         die ("insert error");
@@ -26,4 +26,3 @@ VALUE('$name','$des','$price','$qty','$type')";
 
 
 ?>
-

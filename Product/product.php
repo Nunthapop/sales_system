@@ -8,8 +8,20 @@ include "../header/nav.php"; ?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/product.css"> 
     <title>Document</title>
+    <?php $background_image = "https://worldchemical.co.th/wp-content/uploads/2023/07/high-angle-lit-candles-with-string-pine-cones-scaled.jpg";
+    ?>
+    <style>
+    body {
+    background-image: url('<?php echo $background_image; ?>');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    }
+    </style>  
+    
+
 
 </head>
 
@@ -38,7 +50,9 @@ include "../header/nav.php"; ?>
                 <tr>
                     <td><?php echo $row['product_id']; ?></td>
                     <td><?php echo $row['product_name']; ?></td>
-                    <td><?php echo number_format($row['product_price'], 2) ?></td>
+                    <td>
+                    
+                    <?php echo number_format($row['product_price'], 2) ?></td>
                     <td><?php echo $row['product_description']; ?></td>
                     <td><?php echo $row['amount']; ?></td>
                     <td><?php echo $row['product_type']; ?></td>
@@ -49,7 +63,7 @@ include "../header/nav.php"; ?>
 
 
             <?php } ?>
-                    <div><a href="create_prod.php">Create</a></div>
+            <div><a href="create_prod.php">Create</a></div>
 
     </div>
 </body>

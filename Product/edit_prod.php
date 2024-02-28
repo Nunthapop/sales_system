@@ -2,7 +2,7 @@
 include "../header/nav.php";
 $id = $_GET['id'];
 
-echo $id;
+echo "Product ID $id";
 
 ?>
 <!DOCTYPE html>
@@ -11,7 +11,7 @@ echo $id;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/edit_prod.css">
     <title>Document</title>
 </head>
 
@@ -30,7 +30,6 @@ echo $id;
             <th>des</th>
             <th>amt</th>
             <th>type</th>
-            <th>Edit</th>
         </tr>
         <?php while ($row = mysqli_fetch_assoc($result)) { ?>
 
@@ -43,13 +42,13 @@ echo $id;
                 <td><input type="text" value="<?php echo $row['product_description']; ?>"name="des"></td>
                 <td><input type="text" value="<?php echo $row['amount']; ?>"name="qty"></td>
                 <td><input type="text" value="<?php echo $row['product_type']; ?>"name="type"></td>
-                <input type="submit" name="submit" value="save" >
-                    <input type="reset" name="reset" value="CANCEL">
-
+                
             </tr>
 
-
-
+    <div>
+    <input type="submit" name="submit" value="SAVE" >
+    <input type="reset" name="reset" value="CANCEL">
+    </div>
 
         <?php } ?>
         </form>
