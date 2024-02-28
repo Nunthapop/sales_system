@@ -7,15 +7,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create product</title>
+    <title>Add Emp</title>
 </head>
 <body>
-    <form action="create_prod_check.php" method="post">
-   <div>Product name: <input type="text" name="name"></div>
-   <div>Product price: <input type="text" name="price"></div>
-   <div>Product description: <input type="text" name="des"></div>
-   <div>amount: <input type="text" name="qty"></div>
-   <div>type <input type="text" name="type"></div>
+    <form action="create_emp_check.php" method="post">
+   <div>Employee name: <input type="text" name="name"></div>
+   <div>Employee position <input type="text" name="pos"></div>
    <button> go</button>
    </form>
 </body>

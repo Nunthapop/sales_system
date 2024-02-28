@@ -1,18 +1,16 @@
 <?php include "../header/nav.php";
 
 
-if(empty($_POST['name']) && empty($_POST['price']) && empty($_POST['qty']))
+if(empty($_POST['name']))
 {
     header('Location:../admin.php');
 }
 else{
     $name = $_POST['name'];
-    $price =$_POST['price'];
-    $des =$_POST['des'];
-    $qty =$_POST['qty'];
-    $type =$_POST['type'];
-$query = "INSERT INTO product (product_name,product_description,product_price,amount,product_type) 
-VALUE('$name','$des','$price','$qty','$type')";
+    $pos =$_POST['pos'];
+    
+$query = "INSERT INTO employee (emp_name,emp_position) 
+VALUES ('$name','$pos')";
 
     
     $result = mysqli_query($connect, $query);
@@ -20,7 +18,7 @@ VALUE('$name','$des','$price','$qty','$type')";
         die ("insert error");
     } 
     
-    header('Location:product.php');
+    header('Location:emp.php');
     
 }
 
