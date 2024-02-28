@@ -11,6 +11,7 @@
     <title>Sales_system</title>
 </head>
 <body>
+    hi
     <h1>Sales_system Admin page</h1>
     <div> Product<a href="Product/product.php">GO</a></div>
     <div> Employee<a href="employee/employee.php">go</a></div>
