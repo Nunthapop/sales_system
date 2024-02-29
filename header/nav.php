@@ -13,7 +13,7 @@
     <title>navigate bar</title>
     <style> </style>
 </head>
-dddd
+
 <body>
     <div class="nav">
         <a href="../Product/product.php">Product</a>
