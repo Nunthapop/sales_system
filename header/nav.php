@@ -19,7 +19,7 @@
         <a href="../Product/product.php">Product</a>
         <a href="../employee/emp.php">Employee</a>
         <a href="../customer/customer.php">customer</a>
-        <a href="">Invoices</a>
+        <a href="../orders/orders.php">Orders</a>
     </div>
 
 </body>
