@@ -20,6 +20,8 @@
         <a href="../employee/emp.php">Employee</a>
         <a href="../customer/customer.php">customer</a>
         <a href="../orders/orders.php">Orders</a>
+        <a href="">Invoices</a>
+        <a href="../shop/shop.php">Shop</a>
     </div>
 
 </body>
