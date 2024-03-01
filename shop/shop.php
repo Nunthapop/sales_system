@@ -9,22 +9,22 @@ include "../header/nav.php";
 <body>
     <div class="main">
         <?php
-        $query = "SELECT * FROM orders join orders_detail using (orders_id) join customers using (customers_id)";
-        $result = mysqli_query($connect, $query); ?>
+        $query = "SELECT * FROM orders";
+        $query = "SELECT * FROM orders_detail";
+        $result = mysqli_query($connect, $query,); ?>
         <table>
             <tr>
                 <th>Order_id</th>
-                <th>Customer Name</th>
+                <th>Customer_id</th>
                 <th>Quantity</th>
             </tr>
             <?php while ($row = mysqli_fetch_assoc($result)) { ?>
                 <tr>
                     <td>
-                        <?php echo $row['orders_id'] ?>
+                        <?php echo $row['orders_id']; ?>
                     </td>
                     <td>
-                        <?php echo $row['cus_first_name'];
-                        echo $row['cus_last_name']; ?>
+                        <?php echo $row['customers_id']; ?>
                     </td>
                     <td>
                         <?php echo $row['qty']; ?>
