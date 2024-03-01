@@ -1,5 +1,5 @@
 <?php
-include "../header/nav.php"; 
+include "../header/nav.php";
 
 $id = $_GET['id'];
 ?>
@@ -25,33 +25,53 @@ $result = mysqli_query($connect, $query); ?>
                 <th>Description</th>
                 <th>price </th>
                 <th>product_type</th>
-            <th> amount</th>
-            <th> total</th>
+                <th> amount</th>
+                <th> total</th>
             </tr>
-            <?php 
-$previousOrderId = null;
-while ($row = mysqli_fetch_assoc($result)) {
-    
-    $total =$row['orders_total'];
-    $name = $row['cus_first_name'] .' '. $row['cus_last_name'];
-    ?>
+            <?php
+            $previousOrderId = null;
+            $total = 0;
+            while ($row = mysqli_fetch_assoc($result)) {
+
+                //$total =$row['orders_total'];
+                $name = $row['cus_first_name'] . ' ' . $row['cus_last_name'];
+                $total += $row['product_price'] * $row['qty'];
+                $membership_dis = $row['member_discount'];
+            ?>
 
 
 
-    <tr>
-        <td><?php echo $row['product_name']; ?></td>
-        <td><?php echo $row['product_description']; ?></td>
-        <td><?php echo $row['product_price']; ?></td>
-        <td><?php echo $row['product_type']; ?></td>
-        <td><?php echo $row['qty']; ?></td>
-        <td><?php echo $row['product_price'] * $row['qty']; ?></td>
-        
-       
-<?php } ?>
-</TABLE>
-</div>
+                <tr>
+                    <td><?php echo $row['product_name']; ?></td>
+                    <td><?php echo $row['product_description']; ?></td>
+                    <td><?php echo $row['product_price']; ?></td>
+                    <td><?php echo $row['product_type']; ?></td>
+                    <td><?php echo $row['qty']; ?></td>
+                    <td><?php echo $row['product_price'] * $row['qty']; ?></td>
 
-<?php echo $total  . $name; ?>
+
+                <?php } ?>
+        </TABLE>
+    </div>
+
+    <?php //echo $total  . $name; 
+    echo $total; ?>
 </body>
-
 </html>
+<?php
+$discount =10; //
+$dis_price = 0;
+$orders_total = 0;
+//calculate discount for requirement and membership discount
+if ($total >= 20) {
+    $dis_price =($total/100) * ($discount + $membership_dis);
+    $orders_total = $total - $dis_price;
+}
+else{
+    $dis_price =($total/100) * $membership_dis;
+    $orders_total = $total - $dis_price;
+}
+echo 'net' . $orders_total;
+
+    
+?>
