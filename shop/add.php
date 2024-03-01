@@ -49,7 +49,6 @@
                 </td>
             </tr>
             <tr>
-
                 <td>Product price: </td>
                 <td><input type="text" name="price"></td>
             </tr>
@@ -78,3 +77,6 @@
 </body>
 
 </html>
+<?php
+
+?>

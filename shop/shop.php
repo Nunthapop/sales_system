@@ -21,8 +21,6 @@ include "../header/nav.php";
             </tr>
             <?php while ($row = mysqli_fetch_assoc($result)) { ?>
 
-
-
                 <tr>
                     <td>
                         <?php echo $row['product_id']; ?>
