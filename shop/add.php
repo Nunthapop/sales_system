@@ -67,7 +67,7 @@
             </tr>
             <tr>
                 <td></td>
-                <td><button>Confirm</button></td>
+                <td><button>Add</button></td>
             </tr>
         </table>
 
