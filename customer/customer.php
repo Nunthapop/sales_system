@@ -13,8 +13,6 @@ include "../header/nav.php"; ?>
     
 
 <main>
-
-
 <div class="parent-box">
     <h2>Customer</h2>
     <?php
@@ -47,7 +45,7 @@ include "../header/nav.php"; ?>
                 <td><?php echo $row['telephone']; ?></td>
                 <td><?php echo $row['address']; ?></td>
                 <td><?php echo $row['member_name']; ?></td>
-                <td><div class="add"><a href="edit_cus.php?id=<?php echo$row['customers_id'];?>">GET IN</a></div></td>
+                <td><div class="add"><a href="edit_cus.php?id=<?php echo$row['customers_id'];?>">Edit</a></div></td>
             </tr>
 
 
