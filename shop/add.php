@@ -1,6 +1,4 @@
 <?php include "../header/nav.php";
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +11,6 @@
 <body>
     <form action="add_check.php" method="post">
         <h2>Add product</h2>
-        <!-- Customer table-->
         <h2>Customer</h2>
         <table>
             <tr>
@@ -33,8 +30,6 @@
                 <td><input type="text" name="address"></td>
             </tr>
         </table><br>
-
-        <!-- Product table-->
         <h2>Product</h2>
         <table>
             <tr>
@@ -49,21 +44,18 @@
                 </td>
             </tr>
             <tr>
-                <td>Product price: </td>
-                <td><input type="text" name="price"></td>
-            </tr>
-            <tr>
-
-                <td> amount:</td>
+                <td> Quantity:</td>
                 <td> <input type="text" name="qty"></td>
             </tr>
             <tr>
-
                 <td> type</td>
-                <td> <input type="radio" name="type">Paraffin wax <input type="radio" name="type">Soy wax <input
-                        type="radio" name="type">Coconut wax<br>
+                <td> <input type="radio" name="type">Paraffin wax <input type="radio" name="type">Soy wax
+                    <input type="radio" name="type">Coconut wax<br>
                     <input type="radio" name="type">Bees wax <input type="radio" name="type">Jasmin rice wax
                 </td>
+            </tr>
+            <tr>
+                <td><input type="date" name="date>"></td>
             </tr>
             <tr>
                 <td></td>
