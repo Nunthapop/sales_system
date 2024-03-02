@@ -7,7 +7,7 @@ if(empty($_POST['name']))
 }
 else{
     $name = $_POST['name'];
-    $pos =$_POST['pos'];
+    $pos =$_POST['position'];
     
 $query = "INSERT INTO employee (emp_name,emp_position) 
 VALUES ('$name','$pos')";

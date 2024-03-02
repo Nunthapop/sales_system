@@ -7,13 +7,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/create_emp.css">
     <title>Add Emp</title>
 </head>
 <body>
-    <form action="create_emp_check.php" method="post">
-   <div>Employee name: <input type="text" name="name"></div>
-   <div>Employee position <input type="text" name="pos"></div>
-   <button> go</button>
+<div class="parent-box">
+<form action="create_emp_check.php" method="post">
+
+   <div class="name">Employee name: <input type="text" name="name"></div>
+   <div class="position">Employee position <select id="cars" name="cars">
+    <option value="manager">Manager</option>
+    <option value="seller">Seller</option>
+ 
+  </select></div>
+   <button> Add</button>
    </form>
+</div>
+  
 </body>
 </html>

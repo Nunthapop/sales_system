@@ -16,7 +16,6 @@ include "../header/nav.php"; ?>
 <body>
  
 
-
     <div class="main">
         <?php
         $query = "SELECT * FROM employee";
