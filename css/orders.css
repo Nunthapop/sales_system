@@ -2,7 +2,6 @@
 /*  Table part */
 main {
     display: flex;
-  
     flex-direction: column;
     /* border: 1px solid black; */
   }
@@ -43,9 +42,11 @@ main {
   table th,
   table td {
     padding: 10px;
+    text-align: center;
   }
   table tr {
     border: 1px solid #ffffff8a;
+    text-align: center;
   }
   tr:nth-child(even) {
       background-color: #e5d2b8;
@@ -56,15 +57,12 @@ main {
   
   table th {
     background-color: #d2a880;
-  
     font-weight: bold;
-    text-align: left;
+    
     color: rgb(255, 255, 255);
   }
   
-  table td {
-    text-align: left;
-  }
+ 
   
 
   /* Net price part */
@@ -104,4 +102,26 @@ main {
     font-family: "Roboto", sans-serif;
     font-weight: 300;
     font-style: normal;
+  }
+  .overall{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100px;
+    
+    margin-top: 3rem;
+    margin-left: 25rem;
+    margin-right: 10rem;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+  }
+  .status, .invoices{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid rgb(161, 161, 161);
+  }
+  .invoices a{
+    border: 1px solid red;
   }
