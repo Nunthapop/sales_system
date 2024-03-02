@@ -21,7 +21,8 @@
     
     <div class="nav">
         <ul>
-            <li><a href="../Product/product.php">Product</a></li>
+        <li><a href="../Product/product.php">Dashboard</a></li>
+            <li><a href="../Product/product.php"> Product</a></li>
             <li> <a href="../employee/emp.php">Employee</a></li>
             <li> <a href="../customer/customer.php">customer</a></li>
             <li> <a href="../orders/orders.php">Orders</a></li>
