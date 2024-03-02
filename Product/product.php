@@ -26,7 +26,7 @@ include "../header/nav.php"; ?>
 </head>
 
 <body>
-    <h1>Product-admin</h1>
+    
 
 
     <div class="main">

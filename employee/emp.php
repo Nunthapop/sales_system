@@ -14,7 +14,7 @@ include "../header/nav.php"; ?>
 </head>
 
 <body>
-    <h1>emp-admin</h1>
+ 
 
 
     <div class="main">
