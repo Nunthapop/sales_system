@@ -21,15 +21,16 @@
     
     <div class="nav">
         <ul>
-        <li><a href="../Product/product.php">Dashboard</a></li>
+        <li><a href="../dashboard/dashboard.php">Dashboard</a></li>
             <li><a href="../Product/product.php"> Product</a></li>
             <li> <a href="../employee/emp.php">Employee</a></li>
             <li> <a href="../customer/customer.php">customer</a></li>
             <li> <a href="../orders/orders.php">Orders</a></li>
             <li> <a href="">Invoices</a></li>
             <li> <a href="../shop/shop.php">Shop</a></li>
+            <li> <a href="../login/logout.php">log out</a></li>
         </ul>
-        
+        <?php echo  $_SESSION['emp_position'];?>
         
     </div>
 

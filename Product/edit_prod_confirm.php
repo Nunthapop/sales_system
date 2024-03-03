@@ -17,11 +17,11 @@ if (isset($_POST['submit']))
         die("something went wrong");
     }else{
     echo "Added Successful";
-    header("edit_prop.php");
+    header("location:product.php");
 }
 
 
 }
 else
-header("location: edit_prop.php");
+header("location:product.php");
 ?>

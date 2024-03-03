@@ -26,21 +26,24 @@ include "../header/nav.php"; ?>
 </head>
 
 <body>
+<main>
+    <div class="parent-box">
+
     
 
-
-    <div class="main">
         <?php
         $query = "SELECT * FROM product";
         $result = mysqli_query($connect, $query); ?>
-        <table>
+        <h2>Product</h2> 
+        <table> 
+            
             <tr>
                 <th>ID</th>
-                <th>name</th>
-                <th>price</th>
-                <th>des</th>
-                <th>amt</th>
-                <th>type</th>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>QTY</th>
+                <th>Type</th>
                 <th>Edit</th>
             </tr>
             <?php while ($row = mysqli_fetch_assoc($result)) { ?>
@@ -56,16 +59,31 @@ include "../header/nav.php"; ?>
                     <td><?php echo $row['product_description']; ?></td>
                     <td><?php echo $row['amount']; ?></td>
                     <td><?php echo $row['product_type']; ?></td>
-                    <td><div class="add"><a href="edit_prod.php?id=<?php echo$row['product_id'];?>">GET IN</a></div></td>
+                    <td>
+                    <?php if ($_SESSION['emp_position'] == 'Manager'){
+                        echo' <div class="add"><a href="edit_prod.php?id=<?php echo$row["product_id"];?>">GET IN</a></div>';
+                    } 
+                    else{
+                        echo 'Only Manager';
+                    }?>
+                    </td>
+                   
                 </tr>
 
 
 
 
             <?php } ?>
-            <div><a href="create_prod.php">Create</a></div>
-
-    </div>
+            </table>
+            <?php if ($_SESSION['emp_position'] == 'Manager'){
+                echo ' <div class="create"><a href="create_prod.php">Create</a></div>';
+            }
+            
+            ?>
+           
+            </div>
+       
+            </main>
 </body>
 
 </html>

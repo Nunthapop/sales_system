@@ -16,12 +16,15 @@ echo "Product ID $id";
 </head>
 
 <body>
-
-<form action=" edit_prod_confirm.php?id=<?php echo $id?>" method="post">
+    <main>
+        <div class="parent-box">
+        <h2>Product Management</h2>
+        <form action=" edit_prod_confirm.php?id=<?php echo $id?>" method="post">
     <?php
     
     $query = "SELECT * FROM product where product_id = $id";
     $result = mysqli_query($connect, $query); ?>
+    
     <table>
         <tr>
             <th>ID</th>
@@ -44,14 +47,21 @@ echo "Product ID $id";
                 <td><input type="text" value="<?php echo $row['product_type']; ?>"name="type"></td>
                 
             </tr>
+            </table>
 
     <div>
-    <input type="submit" name="submit" value="SAVE" >
-    <input type="reset" name="reset" value="CANCEL">
+    
     </div>
 
         <?php } ?>
+        <input type="submit" name="submit" value="SAVE" >
+    <input type="reset" name="reset" value="CANCEL">
         </form>
+        </div>
+
+    </main>
+
+
 </body>
 
 </html>
