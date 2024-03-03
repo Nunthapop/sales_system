@@ -1,46 +1,50 @@
 <?php
-include "../header/nav.php";
-?>
+include "../header/nav.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
-<head></head>
+<head>
+    <style>
+        ul li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            padding: auto;
+        }
+    </style>
+</head>
 
 <body>
-    <div class="main">
-        <?php
-        $query = "SELECT o.orders_id,o.date,o.customers_id,od.qty,od.product_id FROM orders o inner join orders_detail od on o.orders_id = od.orders_id";
-        $result = mysqli_query($connect, $query, ); ?>
-        <table>
-            <tr>
-                <th>Order_id</th>
-                <th>Date</th>
-                <th>Customer_id</th>
-                <th>Quantity</th>
-                <th>Product_id</th>
-            </tr>
-            <?php while ($row = mysqli_fetch_assoc($result)) { ?>
-                <tr>
-                    <td>
-                        <?php echo $row['orders_id']; ?>
-                    </td>
-                    <td>
-                        <?php echo $row['date']; ?>
-                    </td>
-                    <td>
-                        <?php echo $row['customers_id']; ?>
-                    </td>
-                    <td>
-                        <?php echo $row['qty']; ?>
-                    </td>
-                    <td>
-                        <?php echo $row['product_id']; ?>
-                    </td>
-                </tr>
-            <?php } ?>
-            <div><a href="add.php">Add</a></div>
-        </table>
-    </div>
+    <h1>Shop</h1>
+    <ul>
+        <li>
+            <h3>Warnhug</h3>
+            <p>price : 249</p>
+            <button type="button">buy</button>
+        </li>
+        <li>
+            <h3>Raindrops</h3>
+            <p>price : 249</p>
+            <button type="button">buy</button>
+        </li>
+        <li>
+            <h3>Malibu nights</h3>
+            <p>price : 249</p>
+            <button type="button">buy</button>
+        </li>
+        <li>
+            <h3>ciang mai</h3>
+            <p>price : 249</p>
+            <button type="button">buy</button>
+        </li>
+        <li>
+            <h3>La vie en rose</h3>
+            <p>price : 249</p>
+            <button type="button">buy</button>
+        </li>
+    </ul>
 </body>
 
 </html>
