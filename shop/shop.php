@@ -1,5 +1,5 @@
 <?php
-include "../header/nav.php"; ?>
+include "../header/nav_cus.php"; ?>
 
 <!DOCTYPE html>
 <html lang="en">
