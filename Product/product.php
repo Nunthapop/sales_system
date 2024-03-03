@@ -60,8 +60,9 @@ include "../header/nav.php"; ?>
                     <td><?php echo $row['amount']; ?></td>
                     <td><?php echo $row['product_type']; ?></td>
                     <td>
-                    <?php if ($_SESSION['emp_position'] == 'Manager'){
-                        echo' <div class="add"><a href="edit_prod.php?id=<?php echo$row["product_id"];?>">GET IN</a></div>';
+                    <?php if ($_SESSION['emp_level'] == '1'){
+                       ?><div class="add"><a href="edit_prod.php?id=<?php echo$row["product_id"];?>">Edit</a></div><?php
+                       
                     } 
                     else{
                         echo 'Only Manager';
