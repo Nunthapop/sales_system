@@ -5,7 +5,7 @@ $username = $_POST['username'];
 $password = $_POST['password'];
 
 
-$userQuery = "SELECT * FROM customers where cus_fist_name = '$username' and cus_password = '$password' ";
+$userQuery = "SELECT * FROM customers where cus_first_name = '$username' and cus_password = '$password' ";
 
 $result = mysqli_query($connect, $userQuery);
 if (!$result) {
@@ -18,7 +18,7 @@ if (mysqli_num_rows($result) == 0) {
     $row = mysqli_fetch_assoc($result);
 
     if (
-        ($_POST['username'] == $row['cus_fist_name'])
+        ($_POST['username'] == $row['cus_first_name'])
         && ($_POST['password'] == $row['cus_password'])
     ) {
         $_SESSION['customers_id'] = $row['customers_id'];
