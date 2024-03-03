@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+   
+    
+}
+body, .input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+input[type=text], input[type=password]{
+    border: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.336);
+    margin-bottom: 20px;
+}
+
+form{
+    margin-top: 10%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 500px;
+    height: auto;
+    /* margin-top: 20rem; */
+    background-color: #ffffff;
+    box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+.username{
+    margin-top: 30px;
+}

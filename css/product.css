@@ -1,82 +1,76 @@
-  /*
-  table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
+main {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid black; */
 }
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
+.parent-box {
+  margin-top: 5rem;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+  margin-left: 25rem;
+  margin-right: 10rem;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #ffffff;
+  box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
 }
-
-tr:nth-child(even) {
-  background-color: #dddddd;
+&& h2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 10px;
+  margin-left: 20px;
+  margin-top: 1rem;
+  font-size: 2rem;
+  
 }
-*/
-
-
-  /* product.css */
-
-body {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  background-color: #f2f2f2;
-  margin: 0;
-  padding: 0;
-}
-
-h1 {
-  text-align: center;
-  margin-top: 20px;
-  color: #ffffff;
-  font-size: 60px;
-}
-
-.main {
-  max-width: 800px;
-  margin: 0px auto;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 6px;
+  margin-top: 1rem;
 }
 
-table th, table td {
+table th,
+table td {
   padding: 10px;
-  border: 1px solid #ddd;
+  text-align: center;
+}
+table tr {
+  border: 1px solid #ffffff8a;
+  text-align: center;
+}
+tr:nth-child(even) {
+    background-color: #e5d2b8;
+  }
+table thead {
+  position: sticky;
 }
 
 table th {
-  background-color: #f2f2f2;
+  background-color: #d2a880;
   font-weight: bold;
-  text-align: left;
+  
+  color: rgb(255, 255, 255);
 }
-
-table td {
-  text-align: left;
+.overall{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100px;
+  
+  margin-top: 3rem;
+  margin-left: 25rem;
+  margin-right: 10rem;
+  background-color: #ffffff;
+  box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
 }
-
-.add {
-  text-align: center;
+.create{
+  margin-top: 1rem;
 }
-
-.add a {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #cdbc6a;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-.add a:hover {
-  background-color: #b08545;
-}
-

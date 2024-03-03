@@ -11,17 +11,19 @@ echo $id;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/product.css">
+    <link rel="stylesheet" href="../css/edit_emp.css">
     <title>Document</title>
 </head>
 
 <body>
-
-<form action=" edit_emp_confirm.php?id=<?php echo $id?>" method="post">
+<main>
+    <div class="parent-box">
+    <form action=" edit_emp_confirm.php?id=<?php echo $id?>" method="post">
     <?php
     
     $query = "SELECT * FROM employee where employee_id = $id";
     $result = mysqli_query($connect, $query); ?>
+    <h2>Employee Management</h2>
    <table>
             <tr>
                 <th>ID</th>
@@ -47,6 +49,9 @@ echo $id;
 
         <?php } ?>
         </form>
+    </div>
+</main>
+
 </body>
 
 </html>

@@ -24,17 +24,25 @@
 </head>
 
 <body>
+   <main> 
 <form action="create_prod_check.php" method="post">
     
 <h2>Create product</h2>
     <div>Product name: <input type="text" name="name"></div>
     <div>Product price: <input type="text" name="price"></div>
     <div>Product description: <input type="text" name="des"></div>
-    <div>amount: <input type="text" name="qty"></div>
-    <div>type <input type="text" name="type"></div>
+    <div>Quantity: <input type="text" name="qty"></div>
+    <div>Type <select  name="type">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    </select>
+ </div>
     <button> go</button>
 </form>
-
+</main>
 
 </body>
 </html>
