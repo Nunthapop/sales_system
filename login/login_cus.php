@@ -18,8 +18,9 @@ session_start();
 </head>
 
 <body>
-    <form action="check_login.php" method="post">
+    <form action="check_login_cus.php" method="post">
         <div class="input">
+            <h1>Customer</h1>
             <label class="username">USERNAME<br></label>
             <input type="text" id="username" name="username">
         </div>
@@ -32,8 +33,5 @@ session_start();
         <div class="forget"> Not a member yet?<a href="register.php"> Register now</a></div>
 
         </div>
-        <a href="login_cus.php">Customer</a>
     </form>
 </body>
-
-</html>
