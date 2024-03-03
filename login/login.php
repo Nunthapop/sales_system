@@ -20,6 +20,7 @@ session_start();
 <body>
     <form action="check_login.php" method="post">
         <div class="input">
+            <h1>Employee</h1>
             <label class="username">USERNAME<br></label>
             <input type="text" id="username" name="username">
         </div>
