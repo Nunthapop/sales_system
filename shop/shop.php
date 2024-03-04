@@ -33,7 +33,6 @@ include "../header/nav.php"; ?>
         </li>
         <li>
             <img src="malibu_nights.jpg" alt="Malibu nights">
-            <img src="malibu_nights.jpg" alt="Malibu nights">
             <h3>Malibu nights</h3>
             <p>Price : 249฿</p>
             <button type="button">Add to cart</button>
