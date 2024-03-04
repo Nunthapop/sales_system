@@ -100,11 +100,12 @@ $result2 = mysqli_query($connect, $query); ?>
                         <th>TOTAL</th>
                     </tr>
                     <?php
+
                     $discount = 10; //
                     $dis_price = 0;
                     $total = 0;
                     //calculate discount for requirement and membership discount
-                    if ($subtotal >= 20) {
+                    if ($subtotal >= 1200) {
                         $dis_price = ($subtotal / 100) * ($discount + $membership_dis);
                         $total = $subtotal - $dis_price;
                     } else {
@@ -118,7 +119,7 @@ $result2 = mysqli_query($connect, $query); ?>
                     <tr>
                         <td><?php
                             echo $subtotal; ?></td>
-                        <td><?php echo $discount; ?></td>
+                        <td><?php echo $dis_price; ?></td>
                         <td>free</td>
                         <td>free</td>
                         <td><?php echo $total; ?></td>

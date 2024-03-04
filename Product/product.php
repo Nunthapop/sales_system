@@ -76,7 +76,7 @@ include "../header/nav.php"; ?>
 
             <?php } ?>
             </table>
-            <?php if ($_SESSION['emp_position'] == 'Manager'){
+            <?php if ($_SESSION['emp_level'] == '1'){
                 echo ' <div class="create"><a href="create_prod.php">Create</a></div>';
             }
             
