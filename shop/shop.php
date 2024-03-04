@@ -1,5 +1,5 @@
 <?php
-include "../header/nav_cus.php"; ?>
+include "../header/nav.php"; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,29 +20,35 @@ include "../header/nav_cus.php"; ?>
     <h1>Shop</h1>
     <ul>
         <li>
-            <h3>Warnhug</h3>
-            <p>price : 249</p>
-            <button type="button">buy</button>
+            <img src="warm_hug.jpg" alt="Warm hug">
+            <h3>Warm hug</h3>
+            <p>Price : 249฿</p>
+            <button type="button">Add to cart</button>
         </li>
         <li>
+            <img src="raindrops.jpg" alt="Raindrops">
             <h3>Raindrops</h3>
-            <p>price : 249</p>
-            <button type="button">buy</button>
+            <p>Price : 249฿</p>
+            <button type="button">Add to cart</button>
         </li>
         <li>
+            <img src="malibu_nights.jpg" alt="Malibu nights">
+            <img src="malibu_nights.jpg" alt="Malibu nights">
             <h3>Malibu nights</h3>
-            <p>price : 249</p>
-            <button type="button">buy</button>
+            <p>Price : 249฿</p>
+            <button type="button">Add to cart</button>
         </li>
         <li>
-            <h3>ciang mai</h3>
-            <p>price : 249</p>
-            <button type="button">buy</button>
+            <img src="chiang_mai.jpg" alt="Chiang mai">
+            <h3>Chiang mai</h3>
+            <p>Price : 249฿</p>
+            <button type="button">Add to cart</button>
         </li>
         <li>
+            <img src="la_vie_en_rose.jpg" alt="La vie en rose">
             <h3>La vie en rose</h3>
-            <p>price : 249</p>
-            <button type="button">buy</button>
+            <p>Price : 249฿</p>
+            <button type="button">Add to cart</button>
         </li>
     </ul>
 </body>
