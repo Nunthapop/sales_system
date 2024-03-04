@@ -27,7 +27,7 @@ if (mysqli_num_rows($result) == 0) {
         $_SESSION['address'] = $row['address'];
         $_SESSION['cus_password'] = $row['cus_password'];
 
-        header("Location: ../header/nav_cus.php");
+        header("Location: ../shop/shop.php");
     } else {
         $_SESSION['error_msg'] = "username or password is incorrect";
         header("Location: login_cus.php");
