@@ -28,11 +28,11 @@ echo "Product ID $id";
     <table>
         <tr>
             <th>ID</th>
-            <th>name</th>
-            <th>price</th>
-            <th>des</th>
-            <th>amt</th>
-            <th>type</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th>Quantity</th>
+            <th>Type</th>
         </tr>
         <?php while ($row = mysqli_fetch_assoc($result)) { ?>
 
@@ -45,7 +45,6 @@ echo "Product ID $id";
                 <td><input type="text" value="<?php echo $row['product_description']; ?>"name="des"></td>
                 <td><input type="text" value="<?php echo $row['amount']; ?>"name="qty"></td>
                 <td><input type="text" value="<?php echo $row['product_type']; ?>"name="type"></td>
-                
             </tr>
             </table>
 

@@ -15,6 +15,7 @@
 <form action="create_emp_check.php" method="post">
 
    <div class="name">Employee name: <input type="text" name="name"></div>
+   <div class="name">Password: <input type="text" name="pass"></div>
    <div class="position">Employee position <select id="cars" name="position">
     <option value="manager">Manager</option>
     <option value="seller">Seller</option>

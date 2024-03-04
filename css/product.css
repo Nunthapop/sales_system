@@ -20,6 +20,7 @@ main {
   background-color: #ffffff;
   box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
+  max-width: 1300px;
 }
 && h2 {
   position: absolute;
@@ -36,7 +37,11 @@ table {
   border-collapse: collapse;
   margin-top: 1rem;
 }
-
+table td{
+  font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
 table th,
 table td {
   padding: 10px;

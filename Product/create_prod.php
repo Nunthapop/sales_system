@@ -33,11 +33,11 @@
     <div>Product description: <input type="text" name="des"></div>
     <div>Quantity: <input type="text" name="qty"></div>
     <div>Type <select  name="type">
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
-    <option value="5">5</option>
+    <option value="Jasmine">Jasmine rice wax +39</option>
+    <option value="Paraffin">Paraffin wax </option>
+    <option value="soy">soy way +29</option>
+    <option value="Coconut">Coconut wax +29</option>
+    <option value="Bees">Bees wax +19</option>
     </select>
  </div>
     <button> go</button>

@@ -10,7 +10,7 @@ if (isset($_POST['submit']))
     $type =$_POST['type'];
 
     $query = "UPDATE product
-    SET product_name='$name', product_description=' $price',product_price='$des',amount='$qty',product_type='$type' where product_id = '$id'";
+    SET product_name='$name', product_description=' $des',product_price='$price',amount='$qty',product_type='$type' where product_id = '$id'";
     $result = mysqli_query($connect, $query); 
     
     if(!$result){
