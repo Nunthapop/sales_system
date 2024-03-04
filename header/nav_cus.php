@@ -1,8 +1,7 @@
 <?php
-session_start();
 include_once "../config/config.php";
-$userQuery = "SELECT * from customers";
-$result = mysqli_query($connect, $userQuery);
+session_start();
+
 ?>
 
 <!DOCTYPE html>
@@ -24,22 +23,10 @@ $result = mysqli_query($connect, $userQuery);
 
     <div>
         <ul>
-            <?php
-            if (isset($_SESSION['username'])) {
-                echo $_SESSION['cus_first_name'];
-                echo '<li><a href="logout.php">Logout - </a>';
-                echo "<span class='user-desc'>&nbsp;[";
-                echo $_SESSION['cus_first_name']
-                    . "" . $_SESSION['cus_last_name']
-                    . "-Level:" . $_SESSION['membership_id'];
-                echo "]</span></li>";
-            } else {
-                echo '<li><a href="login_cus.php">Login</a></li>';
-            } ?>
+            <?php echo $_SESSION['cus_first_name'] . $_SESSION['cus_last_name'] ?>
         </ul>
     </div>
 
 </body>
 
 </html>
-<?php include_once "shop.php"; ?>
