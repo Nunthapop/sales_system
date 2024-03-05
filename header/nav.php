@@ -24,6 +24,10 @@
 
     <div class="nav">
         <ul>
+            <li>
+                <div class="profile"><i class="fa-regular fa-user fa-lg"></i></div>
+               <h2><?php echo  $_SESSION['emp_name']?> </h2> <?php  echo $_SESSION['emp_position'];?>
+            </li>
             <li><i class="fa-solid fa-house"></i><a href="../dashboard/dashboard.php">Dashboard</a></li>
             <li><i class="fa-solid fa-boxes-stacked"></i><a href="../Product/product.php"> Product</a></li>
             <li> <i class="fa-solid fa-user-tie"></i><a href="../employee/emp.php">Employee</a></li>
