@@ -1,5 +1,5 @@
 <?php
-include "../header/nav.php"; ?>
+include "../header/nav_cus.php"; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +20,7 @@ include "../header/nav.php"; ?>
     <h1>Shop</h1>
     <ul>
         <li>
-        <img src="warm_hug.jpg" alt="Warm hug">
+            <img src="warm_hug.jpg" alt="Warm hug">
             <h3>Warm hug</h3>
             <p>Price : 200฿</p>
             <form action="">
@@ -56,7 +56,7 @@ include "../header/nav.php"; ?>
                 <label for="malibu_paraffin">Paraffin Wax +19฿</label>
                 <input type="text" id="malibu_paraffin" name="malibu_paraffin_quantity">
                 <button type="submit">Add to cart</button>
-           </form>
+            </form>
         </li>
         <li>
             <img src="chiang_mai.jpg" alt="Chiang mai">
