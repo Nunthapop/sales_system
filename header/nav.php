@@ -36,7 +36,7 @@
             <!-- <li> <a href="">Invoices</a></li> -->
             <li><i class="fa-solid fa-store"></i> <a href="../shop/shop.php">Shop</a></li>
             <li> <i class="fa-solid fa-right-from-bracket"></i><a href="../login/logout.php">log out</a></li>
-            <li> <?php echo $_SESSION['emp_level']; ?></li>
+           
         </ul>
 
     </div>

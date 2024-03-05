@@ -122,6 +122,11 @@ main {
     align-items: center;
     border-right: 1px solid rgb(161, 161, 161);
   }
-  .invoices a{
-    border: 1px solid red;
+  .status i , .invoices i{
+   margin-right: 10px;
+  }
+  .invoices button{
+    border: 0px;
+    background-color: #ffffff;
+    cursor: pointer;
   }

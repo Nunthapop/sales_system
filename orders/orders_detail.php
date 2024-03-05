@@ -2,6 +2,8 @@
 include "../header/nav.php";
 
 $id = $_GET['id'];
+// $_SESSION['script_del']
+
 ?>
 
 <!DOCTYPE html>
@@ -14,14 +16,20 @@ $id = $_GET['id'];
     <link rel="stylesheet" href="../css/orders.css">
 </head>
 <?php
-$query = "SELECT * FROM orders join orders_detail using (orders_id) 
-join customers using(customers_id) join product using (product_id) join membership using (membership_id) where orders_id =$id";
-$result = mysqli_query($connect, $query); ?>
-<?php
-$query = "SELECT * FROM orders join orders_detail using (orders_id) 
+$query1 = "SELECT * FROM orders join orders_detail using (orders_id) 
 join customers using(customers_id) join product using (product_id) join membership using (membership_id) join employee using(employee_id) where orders_id =$id";
-$result2 = mysqli_query($connect, $query); ?>
-<?php if ($row = mysqli_fetch_assoc($result2)) {
+$result = mysqli_query($connect, $query1); ?>
+
+<?php
+$query2 = "SELECT * FROM orders join orders_detail using (orders_id) 
+join customers using(customers_id) join product using (product_id) join membership using (membership_id) join employee using(employee_id) where orders_id =$id";
+$result2 = mysqli_query($connect, $query2); ?>
+
+<?php
+$query3 = "SELECT * FROM orders join orders_detail using (orders_id) 
+join customers using(customers_id) join product using (product_id) join membership using (membership_id) join employee using(employee_id) where orders_id =$id";
+$result3 = mysqli_query($connect, $query3); ?>
+<?php if ($row = mysqli_fetch_assoc($result)) {
 
 ?>
 
@@ -70,7 +78,7 @@ $result2 = mysqli_query($connect, $query); ?>
                     <?php
                     $previousOrderId = null;
                     $subtotal = 0;
-                    while ($row = mysqli_fetch_assoc($result)) {
+                    while ($row = mysqli_fetch_assoc($result2)) {
 
                         //$total =$row['orders_total'];
                         $name = $row['cus_first_name'] . ' ' . $row['cus_last_name'];
@@ -127,16 +135,38 @@ $result2 = mysqli_query($connect, $query); ?>
                 </table>
 
                 </div>
+                <form action="confirmed.php?id=<?php echo $id;?>" method="post">
                 <!-- Box end -->
                 <div class="overall">
-                    <div class="status">
-                        Status: wait for Payment
-                    </div>
-                    <div class="invoices">
-                        <a href="">Print receipt</a>
-                    </div>
-                </div>
+    <?php 
+    // Assuming $result contains the database query result
+    while ($row = mysqli_fetch_assoc($result3)) { 
+    ?>
+       <?php if($row['del_status'] == 'Delivered' and $row['status'] !== 'In issued') {
+           $icon = '<i class="fa-solid fa-clipboard-check fa-xl" style="color: #63E6BE;"></i>';
+           $icon_s = '<i class="fa-regular fa-circle-check fa-xl" style="color: #63E6BE;"></i>';
+        }
+        else{
+            $icon_s='<i class="fa-solid fa-clock-rotate-left" style="color: #e60a0a;"></i>';
+            $icon= '<i class="fa-solid fa-truck fa-fade fa-lg" id="delivery"></i>';
+        }
+            ?>
+    <div class="status">
+    <?php echo $icon_s;?> Status: <?php echo $row['status']; ?>
+    </div>
+  
+    <div class="invoices">
+     
+        
+        <button type='submit' name='del_status' value="<?php echo $row['del_status']; ?>"><?php echo $icon;?> <?php echo $row['del_status']; ?></button>
+    </div>
+    <?php 
+    } // End of while loop 
+    ?>
+</div>
+</form>
         </main>
+        <script src="orders.js"></script>
     </body>
 
 </html>
