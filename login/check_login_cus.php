@@ -20,12 +20,9 @@ if (mysqli_num_rows($result) == 0) {
     if (
         ($_POST['username'] == $row['cus_first_name']) && ($_POST['password'] == $row['cus_password'])
     ) {
-        $_SESSION['customers_id'] = $row['customers_id'];
         $_SESSION['cus_first_name'] = $row['cus_first_name'];
         $_SESSION['cus_last_name'] = $row['cus_last_name'];
-        $_SESSION['telephone'] = $row['telephone'];
-        $_SESSION['address'] = $row['address'];
-        $_SESSION['cus_password'] = $row['cus_password'];
+        $_SESSION['member_level'] = $row['member_level'];
 
         header("Location: ../shop/shop.php");
     } else {

@@ -23,7 +23,7 @@ session_start();
 
     <div>
         <ul>
-            <?php echo $_SESSION['cus_first_name'] . $_SESSION['cus_last_name'] ?>
+            <?php echo $_SESSION['cus_first_name'] . " " . $_SESSION['cus_last_name'] . " Level " . $_SESSION['member_level'] ?>
         </ul>
     </div>
 
