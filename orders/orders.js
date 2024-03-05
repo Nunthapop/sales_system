@@ -16,3 +16,5 @@ let delivery = document.getElementById("delivery");
 delivery.addEventListener("click", () => {
     delivery.classList.remove("fa-truck", "fa-lg", "fa-xl");
     delivery.classList.add("fa-circle-check");})
+
+ 

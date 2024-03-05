@@ -13,7 +13,7 @@ $id = $_GET['id'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>orders_detail</title>
-    <link rel="stylesheet" href="../css/orders.css">
+    <link rel="stylesheet" href="../css/orders_de.css">
 </head>
 <?php
 $query1 = "SELECT * FROM orders join orders_detail using (orders_id) 
@@ -49,17 +49,17 @@ $result3 = mysqli_query($connect, $query3); ?>
 
                 <div class="delivery">
                     <div class="bill">
-                        <h3> Bill to:</h3><?php
+                        <h3> Bill to:</h3> <h4> <?php
                                             echo $row['cus_first_name'];
-                                            echo $row['cus_last_name']; ?>
+                                            echo $row['cus_last_name']; ?></h4>
                         <h4> <?php echo $row['address']; ?></h4>
                         <h4> <?php echo $row['telephone']; ?></h4>
 
                     </div>
                     <div class="ship">
-                        <h3> Ship to:</h3><?php
+                        <h3> Ship to:</h3> <h4> <?php
                                             echo $row['cus_first_name'];
-                                            echo $row['cus_last_name']; ?>s
+                                            echo $row['cus_last_name']; ?></h4>
                         <h4> <?php echo $row['address']; ?></h4>
                         <h4> <?php echo $row['telephone']; ?></h4>
                     <?php } ?>
@@ -135,10 +135,16 @@ $result3 = mysqli_query($connect, $query3); ?>
                 </table>
 
                 </div>
+             
+                <div class="detail">sssssssss</div>
+
+
                 <form action="confirmed.php?id=<?php echo $id;?>" method="post">
                 <!-- Box end -->
                 <div class="overall">
-    <?php 
+ 
+   
+   <?php 
     // Assuming $result contains the database query result
     while ($row = mysqli_fetch_assoc($result3)) { 
     ?>

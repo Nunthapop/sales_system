@@ -41,7 +41,7 @@ $result = mysqli_query($connect, $query); ?>
                     <td><?php echo $row['orders_total']; ?></td>
                     <td><?php echo $row['status']; ?></td>
                     <td><div class="add"><a href="orders_detail.php?id=<?php echo$row['orders_id'];?>">Detail  </a>
-                    <a href="orders_detail.php?id=<?php echo$row['orders_id'];?>">Invoices</a></div></td>
+                   
                 </tr>
             <?php } ?>
 
