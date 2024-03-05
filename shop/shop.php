@@ -7,12 +7,12 @@ include "../header/nav_cus.php";
 
 <head>
     <style>
-        ul li {
-            display: flex;
+        table {
             justify-content: center;
             align-items: center;
             margin: auto;
             padding: auto;
+            text-align: center;
         }
     </style>
 </head>
@@ -50,10 +50,13 @@ include "../header/nav_cus.php";
                     <td width="100">
                         <?= $row['product_type']; ?>
                     </td>
+                    <td><input Type="text" name="qty"></td>
                 </tr>
             <?php } ?>
         </table>
+        <br><input type="submit" name="submit">
     </center>
+
 </body>
 
 </html>
