@@ -49,17 +49,19 @@ $result3 = mysqli_query($connect, $query3); ?>
 
                 <div class="delivery">
                     <div class="bill">
-                        <h3> Bill to:</h3> <h4> <?php
-                                            echo $row['cus_first_name'];
-                                            echo $row['cus_last_name']; ?></h4>
+                        <h3> Bill to:</h3>
+                        <h4> <?php
+                                echo $row['cus_first_name'];
+                                echo $row['cus_last_name']; ?></h4>
                         <h4> <?php echo $row['address']; ?></h4>
                         <h4> <?php echo $row['telephone']; ?></h4>
 
                     </div>
                     <div class="ship">
-                        <h3> Ship to:</h3> <h4> <?php
-                                            echo $row['cus_first_name'];
-                                            echo $row['cus_last_name']; ?></h4>
+                        <h3> Ship to:</h3>
+                        <h4> <?php
+                                echo $row['cus_first_name'];
+                                echo $row['cus_last_name']; ?></h4>
                         <h4> <?php echo $row['address']; ?></h4>
                         <h4> <?php echo $row['telephone']; ?></h4>
                     <?php } ?>
@@ -99,75 +101,75 @@ $result3 = mysqli_query($connect, $query3); ?>
                         </tr>
                     <?php } ?>
                 </TABLE>
-                <table>
-                    <tr>
-                        <th>Subtotal</th>
+                <?php
+
+                $discount = 10; //
+                $dis_price = 0;
+                $total = 0;
+                //calculate discount for requirement and membership discount
+                if ($subtotal >= 1200) {
+                    $dis_price = ($subtotal / 100) * ($discount + $membership_dis);
+                    $total = $subtotal - $dis_price;
+                } else {
+                    $dis_price = ($subtotal / 100) * $membership_dis;
+                    $total = $subtotal - $dis_price;
+                }
+                ?>
+               
+                   <ul class="total-detail">
+                    <li><h4>Subtotal </h4><h4><?php echo $subtotal; ?></h4></li>
+                    <li><h4>Discount</h4><h4> <?php echo $dis_price; ?></h4></li>
+                    <li><h4>Tax</h4> <h4>Free</h4></li>
+                    <li> <h4>Delivery</h4><h4>Free</h4></li>
+                    <li> <h4>TOTAL</h4> <h4><?php echo $total; ?></h4></li>
+                   </ul>
+                        <!-- <th>Subtotal</th>
                         <th>Discount</th>
                         <th>Tax </th>
                         <th>Delivery</th>
-                        <th>TOTAL</th>
-                    </tr>
-                    <?php
-
-                    $discount = 10; //
-                    $dis_price = 0;
-                    $total = 0;
-                    //calculate discount for requirement and membership discount
-                    if ($subtotal >= 1200) {
-                        $dis_price = ($subtotal / 100) * ($discount + $membership_dis);
-                        $total = $subtotal - $dis_price;
-                    } else {
-                        $dis_price = ($subtotal / 100) * $membership_dis;
-                        $total = $subtotal - $dis_price;
-                    }
-                    ?>
-                    <tr>
-                        <td><?php
-                            echo $subtotal; ?></td>
-                        <td><?php echo $dis_price; ?></td>
-                        <td>free</td>
-                        <td>free</td>
-                        <td><?php echo $total; ?></td>
-                    </tr>
-                </table>
-
-                </div>
-             
-                <div class="detail">sssssssss</div>
+                        <th>TOTAL</th> -->
+                   
 
 
-                <form action="confirmed.php?id=<?php echo $id;?>" method="post">
+                    
+                    
+                        
+                 
+            </div>
+
+
+
+            <form action="confirmed.php?id=<?php echo $id; ?>" method="post">
                 <!-- Box end -->
                 <div class="overall">
- 
-   
-   <?php 
-    // Assuming $result contains the database query result
-    while ($row = mysqli_fetch_assoc($result3)) { 
-    ?>
-       <?php if($row['del_status'] == 'Delivered' and $row['status'] !== 'In issued') {
-           $icon = '<i class="fa-solid fa-clipboard-check fa-xl" style="color: #63E6BE;"></i>';
-           $icon_s = '<i class="fa-regular fa-circle-check fa-xl" style="color: #63E6BE;"></i>';
-        }
-        else{
-            $icon_s='<i class="fa-solid fa-clock-rotate-left" style="color: #e60a0a;"></i>';
-            $icon= '<i class="fa-solid fa-truck fa-fade fa-lg" id="delivery"></i>';
-        }
-            ?>
-    <div class="status">
-    <?php echo $icon_s;?> Status: <?php echo $row['status']; ?>
-    </div>
-  
-    <div class="invoices">
-     
-        
-        <button type='submit' name='del_status' value="<?php echo $row['del_status']; ?>"><?php echo $icon;?> <?php echo $row['del_status']; ?></button>
-    </div>
-    <?php 
-    } // End of while loop 
-    ?>
-</div>
-</form>
+
+
+                    <?php
+                    // Assuming $result contains the database query result
+                    while ($row = mysqli_fetch_assoc($result3)) {
+                    ?>
+                        <?php if ($row['del_status'] == 'Delivered' and $row['status'] !== 'In issued') {
+                            $icon = '<i class="fa-solid fa-clipboard-check fa-xl" style="color: #63E6BE;"></i>';
+                            $icon_s = '<i class="fa-regular fa-circle-check fa-xl" style="color: #63E6BE;"></i>';
+                        } else {
+                            $icon_s = '<i class="fa-solid fa-clock-rotate-left" style="color: #e60a0a;"></i>';
+                            $icon = '<i class="fa-solid fa-truck fa-fade fa-lg" id="delivery"></i>';
+                        }
+                        ?>
+                        <div class="status">
+                            <?php echo $icon_s; ?> Status: <?php echo $row['status']; ?>
+                        </div>
+
+                        <div class="invoices">
+
+
+                            <button type='submit' name='del_status' value="<?php echo $row['del_status']; ?>"><?php echo $icon; ?> <?php echo $row['del_status']; ?></button>
+                        </div>
+                    <?php
+                    } // End of while loop 
+                    ?>
+                </div>
+            </form>
         </main>
         <script src="orders.js"></script>
     </body>

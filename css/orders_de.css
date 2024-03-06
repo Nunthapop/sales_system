@@ -2,6 +2,7 @@
 /*  Table part */
 main {
   display: grid;
+ 
   /* grid-template-columns: 1fr 1fr;
   max-height: 400px; */
   
@@ -132,6 +133,8 @@ main {
     background-color: #ffffff;
     box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.1);
     border-radius: 25px;
+    margin-bottom: 20px;
+   
   }
   .status, .invoices{
     display: flex;
@@ -148,3 +151,21 @@ main {
     background-color: #ffffff;
     cursor: pointer;
   }
+.total-detail{
+width: 100%;
+  /* border: 1px solid red; */
+  
+  
+}
+.total-detail li{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  
+}
+.total-detail li:last-child{
+  background-color: #F5E8DD;
+}
