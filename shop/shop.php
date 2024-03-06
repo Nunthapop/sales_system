@@ -35,26 +35,30 @@ include "../header/nav_cus.php";
             <?php
             while ($row = mysqli_fetch_assoc($result)) { ?>
                 <tr>
-                    <td width="100">
-                        <?= $row['product_id']; ?>
-                    </td width="100">
-                    <td>
-                        <?= $row['product_name']; ?>
-                    </td>
-                    <td width="100">
-                        <?= number_format($row['product_price'], 2) ?>
-                    </td>
-                    <td width="100">
-                        <?= $row['product_description']; ?>
-                    </td>
-                    <td width="100">
-                        <?= $row['product_type']; ?>
-                    </td>
-                    <td><input Type="text" name="qty"></td>
+                    <form action="or.php" method="post">
+                        <td width="100">
+                            <?= $row['product_id']; ?>
+                        </td>
+                        <td width="100">
+                            <?= $row['product_name']; ?>
+                        </td>
+                        <td width="100">
+                            <?= number_format($row['product_price'], 2) ?>
+                        </td>
+                        <td width="100">
+                            <?= $row['product_description']; ?>
+                        </td>
+                        <td width="100">
+                            <?= $row['product_type']; ?>
+                        </td>
+                        <td>
+                            <input type="hidden" name="txtProductID" value="<?php echo $row["product_id"]; ?>" size="2">
+                            <input type="text" name="txtQty" value="1" size="2"> <input type="submit" value="Add">
+                        </td>
+                    </form>
                 </tr>
             <?php } ?>
         </table>
-        <br><input type="submit" name="submit">
     </center>
 
 </body>
