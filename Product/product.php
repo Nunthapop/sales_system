@@ -39,6 +39,7 @@ include "../header/nav.php"; ?>
             
             <tr>
                 <th>ID</th>
+                <th>Image</th>
                 <th>Product Name</th>
                 <th>Price</th>
                 <th>Description</th>
@@ -52,6 +53,7 @@ include "../header/nav.php"; ?>
 
                 <tr>
                     <td><?php echo $row['product_id']; ?></td>
+                    <td><img src="<?php echo ' ../image/' . $row['image']; ?>" alt="" class="image-pic"></td>
                     <td><?php echo $row['product_name']; ?></td>
                     <td>
                     

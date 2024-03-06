@@ -19,7 +19,7 @@ echo "Product ID $id";
     <main>
         <div class="parent-box">
         <h2>Product Management</h2>
-        <form action=" edit_prod_confirm.php?id=<?php echo $id?>" method="post">
+        <form action=" edit_prod_confirm.php?id=<?php echo $id?>" method="post" enctype="multipart/form-data">
     <?php
     
     $query = "SELECT * FROM product where product_id = $id";
@@ -33,6 +33,7 @@ echo "Product ID $id";
             <th>Description</th>
             <th>Quantity</th>
             <th>Type</th>
+            <th>Image</th>
         </tr>
         <?php while ($row = mysqli_fetch_assoc($result)) { ?>
 
@@ -45,12 +46,14 @@ echo "Product ID $id";
                 <td><input type="text" value="<?php echo $row['product_description']; ?>"name="des"></td>
                 <td><input type="text" value="<?php echo $row['amount']; ?>"name="qty"></td>
                 <td><input type="text" value="<?php echo $row['product_type']; ?>"name="type"></td>
+                <td><img src="<?php echo ' ../image/' . $row['image']; ?>" alt="" class="image-pic"></td>
             </tr>
             </table>
-
+            
     <div>
     
     </div>
+    <div class="upload-image">Upload new image:<input type="file" name="image"></div>
 
         <?php } ?>
         <input type="submit" name="submit" value="SAVE" >

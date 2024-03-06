@@ -120,9 +120,6 @@ $result3 = mysqli_query($connect, $query3); ?>
                         $dis_price = ($subtotal / 100) * $membership_dis;
                         $total = $subtotal - $dis_price;
                     }
-
-
-
                     ?>
                     <tr>
                         <td><?php

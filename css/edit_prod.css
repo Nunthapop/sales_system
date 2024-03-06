@@ -35,7 +35,10 @@ table td {
     padding: 8px;
     text-align: left;
     font-size: larger;
+    
 }
+
+
 
 table th {
     background-color: #edd49d;
@@ -104,3 +107,16 @@ box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.1);
 a{
     color: black;
 }
+.image-pic{
+    max-width: 40px;
+    max-height: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+  }
+  .image-pic:hover{
+cursor: pointer;
+  }
+  .upload-image{
+    margin-top: 15px;
+    margin-bottom:5px;
+  }
