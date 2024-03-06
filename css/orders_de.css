@@ -10,7 +10,7 @@ main {
   }
   .parent-box {
     
-    margin-top: 5rem;
+    margin-top: 2rem;
     border-radius: 25px;
     display: flex;
     justify-content: center;
@@ -108,6 +108,9 @@ main {
     width: 100%;
     justify-content: start;
   }
+  .header_title i{
+    margin-right: 10px;
+  }
   .box2{
     margin-top: 20px;
     display: flex;
@@ -161,11 +164,33 @@ width: 100%;
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-top: 15px;
+  margin-top: 10px;
   padding-left: 30px;
   padding-right: 30px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.203);
+
+  
   
 }
-.total-detail li:last-child{
-  background-color: #F5E8DD;
+.total-detail li h4{
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
+
+.total-detail li:last-child h4{
+  
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.total-detail li:nth-child(2) h4:nth-child(2){
+color: red;
+}
+.total-detail li:nth-child(3) h4:nth-child(2){
+  color: green;
+  }
+  .total-detail li:nth-child(4) h4:nth-child(2){
+    color: green;
+    }

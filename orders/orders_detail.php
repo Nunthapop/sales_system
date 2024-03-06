@@ -37,7 +37,7 @@ $result3 = mysqli_query($connect, $query3); ?>
         <main>
             <div class="parent-box">
                 <div class="header_title">
-                    <h2>Orders Detail || P.o.# <?php echo $id; ?> </h2>
+                    <h2> <i class="fa-regular fa-file-lines fa-xl"></i>Orders Detail || P.o.# <?php echo $id; ?> </h2>
                     <div class="box2">
                         <h3>Customer ID:<?php echo $row['customers_id'] . ' :' . $row['member_name']; ?></h3>
                         <h3> Date issued:<?php echo $row['date']; ?></h3>
