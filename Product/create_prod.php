@@ -25,7 +25,7 @@
 
 <body>
    <main> 
-<form action="create_prod_check.php" method="post">
+<form action="create_prod_check.php" method="post" enctype="multipart/form-data">
     
 <h2>Create product</h2>
     <div>Product name: <input type="text" name="name"></div>
@@ -39,8 +39,9 @@
     <option value="Coconut">Coconut wax +29</option>
     <option value="Bees">Bees wax +19</option>
     </select>
+    <div><input type="file" name="image"></div>
  </div>
-    <button> go</button>
+    <input type="submit" value="submit" name="submit">
 </form>
 </main>
 

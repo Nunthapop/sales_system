@@ -17,7 +17,7 @@ main {
   padding-bottom: 2rem;
   padding-left: 15px;
   padding-right: 15px;
-  background-color: #ffffff;
+  background-color: #FAF9F6;
   box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
   max-width: 1300px;
@@ -48,7 +48,7 @@ table td {
   text-align: center;
 }
 table tr {
-  border: 1px solid #ffffff8a;
+  background-color: #ffffff;
   text-align: center;
 }
 tr:nth-child(even) {
@@ -78,4 +78,9 @@ table th {
 }
 .create{
   margin-top: 1rem;
+}
+.image-pic{
+  max-width: 40px;
+  max-height: 40px;
+  border-radius: 50%;
 }

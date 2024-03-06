@@ -14,7 +14,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;400;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@100..900&display=swap&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>navigate bar</title>
     <style> </style>
@@ -24,6 +25,10 @@
 
     <div class="nav">
         <ul>
+            <li>
+                <div class="profile"><i class="fa-regular fa-user fa-lg"></i></div>
+              <?php echo  $_SESSION['emp_name']?> || <?php  echo $_SESSION['emp_position'];?>
+            </li>
             <li><i class="fa-solid fa-house"></i><a href="../dashboard/dashboard.php">Dashboard</a></li>
             <li><i class="fa-solid fa-boxes-stacked"></i><a href="../Product/product.php"> Product</a></li>
             <li> <i class="fa-solid fa-user-tie"></i><a href="../employee/emp.php">Employee</a></li>
@@ -32,7 +37,7 @@
             <!-- <li> <a href="">Invoices</a></li> -->
             <li><i class="fa-solid fa-store"></i> <a href="../shop/shop.php">Shop</a></li>
             <li> <i class="fa-solid fa-right-from-bracket"></i><a href="../login/logout.php">log out</a></li>
-            <li> <?php echo $_SESSION['emp_level']; ?></li>
+           
         </ul>
 
     </div>

@@ -27,16 +27,25 @@ else{
     }
     $price =  $price + $added;
 
-$query = "INSERT INTO product (product_name,product_description,product_price,amount,product_type) 
-VALUE('$name','$des','$price','$qty','$type')";
+    $filename = $_FILES["image"]["name"];
+$tempname = $_FILES["image"]["tmp_name"]; 
+$folder = "../image/". $filename;
+
+
+
+$query = "INSERT INTO product (product_name,product_description,product_price,amount,product_type,image) 
+VALUE('$name','$des','$price','$qty','$type','$filename')";
 
 
     $result = mysqli_query($connect, $query);
     if(!$result){
         die ("insert error");
     } 
+    if (move_uploaded_file($tempname, $folder)){
+        header('Location:product.php');
+    }
     
-    header('Location:product.php');
+    
     
 }
 

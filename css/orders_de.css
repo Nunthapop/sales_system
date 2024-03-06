@@ -1,13 +1,16 @@
 /* For orders */
 /*  Table part */
 main {
-    display: flex;
-    flex-direction: column;
+  display: grid;
+ 
+  /* grid-template-columns: 1fr 1fr;
+  max-height: 400px; */
   
     /* border: 1px solid black; */
   }
   .parent-box {
-    margin-top: 5rem;
+    
+    margin-top: 2rem;
     border-radius: 25px;
     display: flex;
     justify-content: center;
@@ -23,8 +26,15 @@ main {
     background-color: #FAF9F6;
     box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
+    /* max-width: 800px; */
+    /* grid-row: 1/2;
+    grid-column: 1/1; */
    
   }
+.detail{
+  
+  /* grid-column: 3/-3; */
+}
   && h2 {
     position: absolute;
     top: 0;
@@ -65,7 +75,9 @@ main {
   }
   
  
-  
+  form{
+   
+  }
 
   /* Net price part */
   /* For orders_Details */
@@ -96,6 +108,9 @@ main {
     width: 100%;
     justify-content: start;
   }
+  .header_title i{
+    margin-right: 10px;
+  }
   .box2{
     margin-top: 20px;
     display: flex;
@@ -113,13 +128,16 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: 100px;
-    
+    grid-row: 1/1;
+  grid-column: 1/2;
     margin-top: 3rem;
     margin-left: 25rem;
     margin-right: 10rem;
     background-color: #ffffff;
     box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.1);
     border-radius: 25px;
+    margin-bottom: 20px;
+   
   }
   .status, .invoices{
     display: flex;
@@ -136,6 +154,43 @@ main {
     background-color: #ffffff;
     cursor: pointer;
   }
-i{
-  margin-top: 10px;
+.total-detail{
+width: 100%;
+  /* border: 1px solid red; */
+  
+  
 }
+.total-detail li{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.203);
+
+  
+  
+}
+.total-detail li h4{
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.total-detail li:last-child h4{
+  
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.total-detail li:nth-child(2) h4:nth-child(2){
+color: red;
+}
+.total-detail li:nth-child(3) h4:nth-child(2){
+  color: green;
+  }
+  .total-detail li:nth-child(4) h4:nth-child(2){
+    color: green;
+    }

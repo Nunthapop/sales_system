@@ -1,5 +1,9 @@
 <?php
-include "../header/nav.php"; ?>
+include "../header/nav.php"; 
+// alert
+if (isset($_SESSION['script_del'])) {
+    echo $_SESSION['script_del'];
+    unset($_SESSION['script_del']);}?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +15,8 @@ include "../header/nav.php"; ?>
     <link rel="stylesheet" href="../css/orders.css">
 </head>
 <?php
-$query = "SELECT * FROM orders join orders_detail using (orders_id) join customers using(customers_id)";
+$query = "SELECT * FROM orders join orders_detail using (orders_id) 
+join customers using(customers_id) join product using (product_id) join membership using (membership_id) join employee using(employee_id)";
 $result = mysqli_query($connect, $query); ?>
 
 <body>
@@ -25,6 +30,7 @@ $result = mysqli_query($connect, $query); ?>
                 <th>Create at</th>
                 <th>customer </th>
                 <th>Orders total</th>
+                <th>Status</th>
                 <th>Orders Details</th>
             </tr>
             <?php while ($row = mysqli_fetch_assoc($result)) { ?>
@@ -33,7 +39,9 @@ $result = mysqli_query($connect, $query); ?>
                     <td><?php echo $row['date']; ?></td>
                     <td><?php echo $row['cus_first_name']; ?></td>
                     <td><?php echo $row['orders_total']; ?></td>
-                    <td><div class="add"><a href="orders_detail.php?id=<?php echo$row['orders_id'];?>">Detail  </a><a href="orders_detail.php?id=<?php echo$row['orders_id'];?>">Invoices</a></div></td>
+                    <td><?php echo $row['status']; ?></td>
+                    <td><div class="add"><a href="orders_detail.php?id=<?php echo$row['orders_id'];?>">Detail  </a>
+                   
                 </tr>
             <?php } ?>
 

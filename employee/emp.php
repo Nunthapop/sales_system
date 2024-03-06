@@ -61,9 +61,7 @@ include "../header/nav.php"; ?>
            }?>
             
         </div>
-        <div class="overall">
-
-        </div>
+   
 
     </main>
 

@@ -17,7 +17,7 @@ main {
     padding-bottom: 2rem;
     padding-left: 15px;
     padding-right: 15px;
-    background-color: #FAF9F6;
+    background-color: #ffffff;
     box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
   }
@@ -36,18 +36,14 @@ main {
     border-collapse: collapse;
     margin-top: 1rem;
   }
-  table td{
-    font-family: "Roboto", sans-serif;
-      font-weight: 400;
-      font-style: normal;
-  }
+  
   table th,
   table td {
     padding: 10px;
     text-align: center;
   }
   table tr {
-    background-color: #ffffff;
+    border: 1px solid #ffffff8a;
     text-align: center;
   }
   tr:nth-child(even) {
@@ -63,19 +59,6 @@ main {
     
     color: rgb(255, 255, 255);
   }
-
-.overall{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  height: 100px;
-  
-  margin-top: 3rem;
-  margin-left: 25rem;
-  margin-right: 10rem;
-  background-color: #ffffff;
-  box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 25px;
-}
-.create{
-    margin-top: 1rem;
-}
+  form{
+    width: 100%;
+  }
