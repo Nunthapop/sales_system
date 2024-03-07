@@ -26,7 +26,7 @@ include "../header/nav_cus.php";
                     <h3><?= $row['product_description']; ?></h3>
                     <h3>Type: <?= $row['product_type']; ?></h3>
                     <input type="hidden" name="txtProductID" value="<?php echo $row["product_id"]; ?>" size="2">
-                   <input type="number" min="0" max='10'  name="txtQty" value="1" size="2">
+                   <input type="number" min="0"   name="txtQty" value="1" size="2">
                         <input type="submit" value="Add">
                 </div> <?php } ?>
 
