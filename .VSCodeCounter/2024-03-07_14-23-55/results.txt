@@ -1,0 +1,91 @@
+Date : 2024-03-07 14:23:55
+Directory : c:\xampp\htdocs\sales_system
+Total : 52 files,  2499 codes, 51 comments, 478 blanks, all 3028 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| PHP      |         38 |      1,443 |         24 |        354 |      1,821 |
+| CSS      |         14 |      1,056 |         27 |        124 |      1,207 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++--------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                               | files      | code       | comment    | blank      | total      |
++--------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                  |         52 |      2,499 |         51 |        478 |      3,028 |
+| Product                                                            |          5 |        287 |          4 |         79 |        370 |
+| config                                                             |          1 |         11 |          0 |         12 |         23 |
+| css                                                                |         13 |      1,043 |         27 |        122 |      1,192 |
+| customer                                                           |          5 |        163 |          0 |         52 |        215 |
+| dashboard                                                          |          1 |         50 |          0 |          9 |         59 |
+| employee                                                           |          6 |        171 |          0 |         56 |        227 |
+| employee (Files)                                                   |          5 |        158 |          0 |         54 |        212 |
+| employee\css                                                       |          1 |         13 |          0 |          2 |         15 |
+| header                                                             |          2 |         68 |          0 |         16 |         84 |
+| login                                                              |          7 |        171 |          0 |         32 |        203 |
+| orders                                                             |          3 |        209 |         20 |         63 |        292 |
+| shop                                                               |          9 |        326 |          0 |         37 |        363 |
+| shop (Files)                                                       |          6 |        216 |          0 |         23 |        239 |
+| shop\may be will delete                                            |          3 |        110 |          0 |         14 |        124 |
++--------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++--------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                           | language | code       | comment    | blank      | total      |
++--------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| c:\xampp\htdocs\sales_system\Product\create_prod.php               | PHP      |         43 |          0 |          8 |         51 |
+| c:\xampp\htdocs\sales_system\Product\create_prod_check.php         | PHP      |         38 |          0 |         17 |         55 |
+| c:\xampp\htdocs\sales_system\Product\edit_prod.php                 | PHP      |         59 |          0 |         17 |         76 |
+| c:\xampp\htdocs\sales_system\Product\edit_prod_confirm.php         | PHP      |         79 |          4 |         13 |         96 |
+| c:\xampp\htdocs\sales_system\Product\product.php                   | PHP      |         68 |          0 |         24 |         92 |
+| c:\xampp\htdocs\sales_system\config\config.php                     | PHP      |         11 |          0 |         12 |         23 |
+| c:\xampp\htdocs\sales_system\css\create_emp.css                    | CSS      |         51 |          0 |          0 |         51 |
+| c:\xampp\htdocs\sales_system\css\create_pro.css                    | CSS      |         57 |          1 |         16 |         74 |
+| c:\xampp\htdocs\sales_system\css\cus.css                           | CSS      |         63 |          1 |          7 |         71 |
+| c:\xampp\htdocs\sales_system\css\db.css                            | CSS      |         93 |          2 |          7 |        102 |
+| c:\xampp\htdocs\sales_system\css\edit_cus.css                      | CSS      |         59 |          1 |          4 |         64 |
+| c:\xampp\htdocs\sales_system\css\edit_emp.css                      | CSS      |         59 |          1 |          4 |         64 |
+| c:\xampp\htdocs\sales_system\css\edit_prod.css                     | CSS      |        128 |          1 |         21 |        150 |
+| c:\xampp\htdocs\sales_system\css\emp.css                           | CSS      |         75 |          1 |          5 |         81 |
+| c:\xampp\htdocs\sales_system\css\login.css                         | CSS      |         35 |          1 |          4 |         40 |
+| c:\xampp\htdocs\sales_system\css\nav.css                           | CSS      |         58 |          0 |         12 |         70 |
+| c:\xampp\htdocs\sales_system\css\orders.css                        | CSS      |        123 |          5 |         13 |        141 |
+| c:\xampp\htdocs\sales_system\css\orders_de.css                     | CSS      |        161 |         12 |         24 |        197 |
+| c:\xampp\htdocs\sales_system\css\product.css                       | CSS      |         81 |          1 |          5 |         87 |
+| c:\xampp\htdocs\sales_system\customer\create_cus.php               | PHP      |         20 |          0 |          2 |         22 |
+| c:\xampp\htdocs\sales_system\customer\create_cus_check.php         | PHP      |         20 |          0 |         11 |         31 |
+| c:\xampp\htdocs\sales_system\customer\customer.php                 | PHP      |         46 |          0 |         18 |         64 |
+| c:\xampp\htdocs\sales_system\customer\edit_cus.php                 | PHP      |         52 |          0 |         13 |         65 |
+| c:\xampp\htdocs\sales_system\customer\edit_cus_confirm.php         | PHP      |         25 |          0 |          8 |         33 |
+| c:\xampp\htdocs\sales_system\dashboard\dashboard.php               | PHP      |         50 |          0 |          9 |         59 |
+| c:\xampp\htdocs\sales_system\employee\create_emp.php               | PHP      |         24 |          0 |          5 |         29 |
+| c:\xampp\htdocs\sales_system\employee\create_emp_check.php         | PHP      |         22 |          0 |          9 |         31 |
+| c:\xampp\htdocs\sales_system\employee\css\product.css              | CSS      |         13 |          0 |          2 |         15 |
+| c:\xampp\htdocs\sales_system\employee\edit_emp.php                 | PHP      |         43 |          0 |         14 |         57 |
+| c:\xampp\htdocs\sales_system\employee\edit_emp_confirm.php         | PHP      |         20 |          0 |          5 |         25 |
+| c:\xampp\htdocs\sales_system\employee\emp.php                      | PHP      |         49 |          0 |         21 |         70 |
+| c:\xampp\htdocs\sales_system\header\nav.php                        | PHP      |         37 |          0 |         10 |         47 |
+| c:\xampp\htdocs\sales_system\header\nav_cus.php                    | PHP      |         31 |          0 |          6 |         37 |
+| c:\xampp\htdocs\sales_system\login\check_login.php                 | PHP      |         30 |          0 |          5 |         35 |
+| c:\xampp\htdocs\sales_system\login\check_login_cus.php             | PHP      |         28 |          0 |          5 |         33 |
+| c:\xampp\htdocs\sales_system\login\login.php                       | PHP      |         34 |          0 |          6 |         40 |
+| c:\xampp\htdocs\sales_system\login\login_cus.php                   | PHP      |         32 |          0 |          5 |         37 |
+| c:\xampp\htdocs\sales_system\login\logout.php                      | PHP      |          6 |          0 |          0 |          6 |
+| c:\xampp\htdocs\sales_system\login\logout_cus.php                  | PHP      |          6 |          0 |          0 |          6 |
+| c:\xampp\htdocs\sales_system\login\register.php                    | PHP      |         35 |          0 |         11 |         46 |
+| c:\xampp\htdocs\sales_system\orders\confirmed.php                  | PHP      |         27 |         15 |         19 |         61 |
+| c:\xampp\htdocs\sales_system\orders\orders.php                     | PHP      |         45 |          1 |          8 |         54 |
+| c:\xampp\htdocs\sales_system\orders\orders_detail.php              | PHP      |        137 |          4 |         36 |        177 |
+| c:\xampp\htdocs\sales_system\shop\checkout.php                     | PHP      |         53 |          0 |          4 |         57 |
+| c:\xampp\htdocs\sales_system\shop\delete.php                       | PHP      |          8 |          0 |          2 |         10 |
+| c:\xampp\htdocs\sales_system\shop\finish_order.php                 | PHP      |          0 |          0 |          1 |          1 |
+| c:\xampp\htdocs\sales_system\shop\may be will delete\add.php       | PHP      |         73 |          0 |          7 |         80 |
+| c:\xampp\htdocs\sales_system\shop\may be will delete\add_check.php | PHP      |         25 |          0 |          5 |         30 |
+| c:\xampp\htdocs\sales_system\shop\may be will delete\cart.php      | PHP      |         12 |          0 |          2 |         14 |
+| c:\xampp\htdocs\sales_system\shop\or.php                           | PHP      |         24 |          0 |          6 |         30 |
+| c:\xampp\htdocs\sales_system\shop\shop.php                         | PHP      |         61 |          0 |          5 |         66 |
+| c:\xampp\htdocs\sales_system\shop\show.php                         | PHP      |         70 |          0 |          5 |         75 |
+| Total                                                              |          |      2,499 |         51 |        478 |      3,028 |
++--------------------------------------------------------------------+----------+------------+------------+------------+------------+

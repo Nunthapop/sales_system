@@ -6,6 +6,8 @@ include "../header/nav_cus.php";
 <head>
     <title>ThaiCreate.Com</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="../css/shop.css">
+
 </head>
 <?php
 
@@ -15,7 +17,7 @@ if (!isset($_SESSION["intLine"])) {
 }
 
 ?>
-<table width="400" border="1">
+<table>
     <tr>
         <td width="101">ProductID</td>
         <td width="82">ProductName</td>
