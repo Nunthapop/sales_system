@@ -34,7 +34,7 @@ session_start();
             </div>
             <input type="submit" value="LOGIN NOW">
             <div class="forget"> Not a member yet?<a href="register.php"> Register now</a></div>
-
+            <a href="login.php">employee</a>
         </div>
         </div>
 
