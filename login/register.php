@@ -11,15 +11,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $add = $_POST['address'];
     $password = $_POST['password'];
     $member = 1;
-    $_SESSION['first'] = $first;
+    
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
     $query = "INSERT INTO customers (cus_first_name, 
     cus_last_name, telephone,address,password, membership_id) VALUES 
-    ('$first', '$last', '$tel','$add','$password','$member')";
+    ('$first', '$last', '$tel','$add','$password',,'$email','$member')";
 
     if (mysqli_query($connect, $query)) {
-        header('Location:../shop/shop.php');
+        header('Location:../login/login.php');
     } else {
         echo "Error: " . $query . "<br>" . mysqli_error($connection);
     }

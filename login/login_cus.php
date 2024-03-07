@@ -21,8 +21,8 @@ session_start();
     <form action="check_login_cus.php" method="post">
         <div class="input">
             <h1>Customer</h1>
-            <label class="username">USERNAME<br></label>
-            <input type="text" id="username" name="username">
+            <label class="username">Email<br></label>
+            <input type="text" id="username" name="email">
         </div>
         <div class="input">
             <label for="">PASSWORD<br></label>

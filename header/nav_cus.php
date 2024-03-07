@@ -28,10 +28,10 @@ session_start();
             <li><a href="shop.php">Shop</a></li>
             <li><a href="show.php">Cart</a></li>
         </ul>
-        <?php if(isset($_SESSION['first'])) {?>
+        <?php if(isset($_SESSION['email'])) {?>
             <div class="profile"><a href=" ../login/logout_cus.php">Profile</a></div>
         <?php }else {?>
-            <div class="profile"><a href=" ../login/logout_cus.php">Profile</a></div>
+            <div class="profile"><a href=" ../login/login_cus.php">Login</a></div>
         <?php } 
          ?>
         
