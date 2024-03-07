@@ -1,0 +1,54 @@
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+}
+.register{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:  #DBD8CD;
+    padding: 50px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    
+}
+h2{
+    font-family: "Montserrat Subrayada", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 20px;
+}
+label{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+input[type=text], input[type=email], input[type=password]{
+    border: 0px;
+    background-color: #DBD8CD;
+    border-bottom: 1px solid black;
+}
+
+.tel, .register{
+    margin-top: 20px;
+}
+input[type=text]:nth-child(5){
+    width: 70%;
+}
+input[type=submit]{
+    padding: 10px;
+    margin-top: 40px;
+    background-color: aliceblue;
+    border: 1px solid black;
+    cursor: pointer;
+}

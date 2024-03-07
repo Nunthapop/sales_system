@@ -28,7 +28,13 @@ session_start();
             <li><a href="shop.php">Shop</a></li>
             <li><a href="show.php">Cart</a></li>
         </ul>
-        <div class="profile"><a href=" ../login/logout_cus.php">Profile</a></div>
+        <?php if(isset($_SESSION['first'])) {?>
+            <div class="profile"><a href=" ../login/logout_cus.php">Profile</a></div>
+        <?php }else {?>
+            <div class="profile"><a href=" ../login/logout_cus.php">Profile</a></div>
+        <?php } 
+         ?>
+        
     </div>
  
 </body>
