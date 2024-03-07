@@ -35,7 +35,7 @@
             <li><i class="fa-solid fa-people-group"></i> <a href="../customer/customer.php">customer</a></li>
             <li> <i class="fa-solid fa-comment-dollar"></i><a href="../orders/orders.php">Orders</a></li>
             <!-- <li> <a href="">Invoices</a></li> -->
-            <li><i class="fa-solid fa-store"></i> <a href="../shop/shop.php">Shop</a></li>
+            <li><i class="fa-solid fa-store"></i> <a href="../login/login_cus.php">Shop</a></li>
             <li> <i class="fa-solid fa-right-from-bracket"></i><a href="../login/logout.php">log out</a></li>
            
         </ul>

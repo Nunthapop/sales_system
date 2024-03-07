@@ -1,6 +1,6 @@
 <?php
 include "../header/nav_cus.php";
-session_start();
+
 ?>
 <html>
 
@@ -55,3 +55,5 @@ Sum Total
 </body>
 
 </html>
+$sql_order_item = "INSERT INTO order_items (order_id, product_id, product_name, product_price, quantity, total) 
+VALUES ('$order_id', '" . $_SESSION["strProductID"][$i] . "', '" . $objResult["product_name"] . "', '" . $objResult["product_price"] . "', '" . $_SESSION['strQty'][$i] . "', '$Total')";
