@@ -15,8 +15,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
     $query = "INSERT INTO customers (cus_first_name, 
-    cus_last_name, telephone,address,password, membership_id) VALUES 
-    ('$first', '$last', '$tel','$add','$password',,'$email','$member')";
+    cus_last_name, telephone,address,password,email, membership_id) VALUES 
+    ('$first', '$last', '$tel','$add','$password','$email','$member')";
 
     if (mysqli_query($connect, $query)) {
         header('Location:../login/login.php');
