@@ -1,0 +1,12 @@
+.title{
+    margin-top: 20px;
+    width: 100%;
+    background-color: #212125;
+}
+.title h1{
+   margin: 10px;
+   font-weight: 600;
+  font-size: 3rem;
+  margin-left: 10rem;
+  color: aliceblue;
+}

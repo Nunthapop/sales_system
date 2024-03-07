@@ -3,6 +3,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr ;
      
 }
+
 .child
 {
     display: flex;
@@ -19,6 +20,18 @@
     max-width: 350px;
     max-height: 350px;
 }
+.title{
+    margin-top: 20px;
+    width: 100%;
+    background-color: #212125;
+}
+.title h1{
+   margin: 10px;
+   font-weight: 600;
+  font-size: 3rem;
+  margin-left: 10rem;
+  color: aliceblue;
+}
 h3{
     text-align: center;
 }
@@ -30,6 +43,7 @@ input[type=submit]{
     border-radius: 25px;
     border: 0px;
     min-width:5rem;
+    margin-top: 10px;
 }
 input[type=submit]:hover{
     cursor: pointer;

@@ -15,6 +15,8 @@ include "../header/nav_cus.php";
         <?php
         $query = "SELECT * FROM product";
         $result = mysqli_query($connect, $query); ?>
+        <div class="title"> <h1>Product</h1> </div>
+       
         <div class="grid">
             <?php
             while ($row = mysqli_fetch_assoc($result)) { ?>
@@ -23,11 +25,9 @@ include "../header/nav_cus.php";
                     <h1><?= $row['product_name']; ?> </h1>
                     <h3><?= $row['product_description']; ?></h3>
                     <h3>Type: <?= $row['product_type']; ?></h3>
-
                     <input type="hidden" name="txtProductID" value="<?php echo $row["product_id"]; ?>" size="2">
                    <input type="number" min="0" max='10'  name="txtQty" value="1" size="2">
                         <input type="submit" value="Add">
-                  
                 </div> <?php } ?>
 
         </div>

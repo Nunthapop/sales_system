@@ -6,9 +6,12 @@ include "../header/nav_cus.php";
 <head>
     <title>ThaiCreate.Com</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link rel="stylesheet" href="../css/shop.css">
+    <link rel="stylesheet" href="css/show.css">
 
 </head>
+<body>
+<div class="title"> <h1>Cart</h1> </div>
+
 <?php
 
 if (!isset($_SESSION["intLine"])) {
@@ -72,6 +75,6 @@ if ($SumTotal > 0) {
     <?php
 }
 ?>
-</body>
 
+</body>
 </html>
