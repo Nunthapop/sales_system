@@ -2,9 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
     font-style: normal;
    
     
@@ -16,6 +16,7 @@ body, .input{
     flex-direction: column;
     
 }
+
 input[type=text], input[type=password]{
     border: 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.336);
@@ -23,18 +24,26 @@ input[type=text], input[type=password]{
 }
 
 form{
-    margin-top: 10%;
-    padding: 10px;
+    margin-top: 150px;
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    width: 500px;
-    height: auto;
-    /* margin-top: 20rem; */
-    background-color: #ffffff;
-    box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color:  #DBD8CD;
+    padding: 50px;
+    box-shadow: -2px 0px 15px 3px rgba(0, 0, 0, 0.1);
 }
 .username{
     margin-top: 30px;
+}
+input[type=submit]{
+    padding: 10px;
+    width: 100%;
+    background-color: aliceblue;
+    border: 1px solid black;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+input[type=submit]:hover{
+    background-color: rgb(183, 185, 187);
 }

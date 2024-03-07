@@ -12,6 +12,7 @@ form{
     align-items: center;
     background-color:  #DBD8CD;
     padding: 50px;
+    box-shadow: -2px 0px 15px 3px rgba(0, 0, 0, 0.1);
 }
 *{
     margin: 0;
