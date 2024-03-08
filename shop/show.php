@@ -61,16 +61,17 @@ if($act=='remove' && !empty($p_id))  //ยกเลิกการสั่ง�
 
 <?php 
 if(!empty($_SESSION['cart'])) {
-    print_r($_SESSION['cart']);
+    // print_r($_SESSION['cart']);
     
     $total = 0;
     foreach($_SESSION['cart'] as $p_id=>$qty) {
-        echo $qty;
-        // $query = "SELECT * FROM product where product_id = $p_id";
-        // $result = mysqli_query($connect, $query);
-        // $row = mysqli_fetch_array($result);
-        // $sum = $row['product_price'] * $qty;
-        // $total += $sum;
+        echo $qty . '<br>' . $p_id ;
+        echo $p_id;
+        $query = "SELECT * FROM product where product_id = $p_id";
+        $result = mysqli_query($connect, $query);
+        $row = mysqli_fetch_array($result);
+        $sum = $row['product_price'] * $qty;
+        $total += $sum;
 ?>
     <div class="product">
         <div class="grid2">
