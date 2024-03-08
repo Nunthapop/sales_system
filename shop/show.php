@@ -1,7 +1,5 @@
 <?php
 include "../header/nav_cus.php";
-error_reporting(0);
-
 ?>
 <html>
 
@@ -31,7 +29,7 @@ error_reporting(0);
         // if($p_id == 0){
         //   echo "<div class='empty'> Ops...Your card is empty</div>";
         // }
-
+    
 
         if ($act == 'add' && !empty($p_id)) {
             if (isset($_SESSION['cart'][$p_id])) {
@@ -57,7 +55,7 @@ error_reporting(0);
     }
 
     ?>
-<form action="confirm_cart.php?id=<?php echo $_SESSION['customer_id']; ?>" method="post">
+ <form action="confirm_cart.php?id=<?php echo $_SESSION['customer_id']; ?>" method="post">
     <div class="product">
         <ul>
             <?php
@@ -72,8 +70,8 @@ error_reporting(0);
                     $sum = $row['product_price'] * $qty;
                     $total += $sum;
                     ?>
-                    <li> <img src="../image/<?php echo $row['image'] ?>" alt="">
-                        <h2> <?php echo $row['product_name'] ?></h2>
+                    <li>
+                        <?php echo $row['product_name'] ?>
                         <?php echo number_format($sum, 2) ?> ฿
                         <div class="Decrements">
                             <a href="show.php?id=<?php echo $p_id ?>&action=decrement">-</a>
@@ -101,10 +99,7 @@ error_reporting(0);
       
     </div>
     <input type="submit" value="Checkout" name="checkout">
-    <?php if(!empty($total)) {?>
-          <li>Total: <?php echo number_format($total, 2) ?> ฿</li>
-    <?php }?>
-  
+    <li>Total: <?php echo number_format($total, 2) ?> ฿</li>
 </form>
 
 

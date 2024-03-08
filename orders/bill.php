@@ -44,7 +44,8 @@ include_once "../config/config.php";
                 <td>Quantity</td>
             </tr>
 
-            <?php $query2 = "SELECT * FROM product join orders_detail using (product_id)";
+            <?php
+            $query2 = "SELECT * FROM product join orders_detail using (product_id)";
             $result2 = mysqli_query($connect, $query2);
             while ($row2 = mysqli_fetch_assoc($result2)) { ?>
                 <tr>
