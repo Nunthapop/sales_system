@@ -16,7 +16,7 @@ $result1 = mysqli_query($connect, $query1);
 if ($result1 && mysqli_num_rows($result1) > 0) {
     $row1 = mysqli_fetch_array($result1);
     $membership_id = $row1['membership_id'];
-    $member_discount = $row1['member_discount']; 
+    $member_discount = $row1['member_discount'];
 
     $discount = 10; // Assuming a fixed discount of 10
 
@@ -44,6 +44,10 @@ if ($result1 && mysqli_num_rows($result1) > 0) {
     ('$date', '$total', '$all_discount', '$status', '$del_status', '$cus_id', 1)";
     $result2 = mysqli_query($connect, $query2);
 
+
+
+
+
     if ($result2) {
         $order_id = mysqli_insert_id($connect);
 
@@ -53,6 +57,11 @@ if ($result1 && mysqli_num_rows($result1) > 0) {
 
             if ($query4 && mysqli_num_rows($query4) > 0) {
                 $row3 = mysqli_fetch_assoc($query4);
+                // deduckstock  
+                $new_stock = $row3['amount'] - $qty;
+                $sql_stock = "UPDATE product
+                SET amount = $new_stock where product_id = '$p_id'";
+                $query_stock = mysqli_query($connect, $sql_stock);
 
                 $sql4 = "INSERT INTO orders_detail (qty, orders_id, product_id) 
                 VALUES ('$qty', '$order_id', '$p_id')";
@@ -64,6 +73,11 @@ if ($result1 && mysqli_num_rows($result1) > 0) {
                 }
             }
         }
+        $query_invoices = "INSERT INTO invoices
+    (payment,invoices_date,orders_id) 
+    VALUES 
+    ('Cash', '$date',$order_id )";
+        $result2 = mysqli_query($connect, $query_invoices);
     } else {
         // Handle error
         echo "Error: " . mysqli_error($connect);
@@ -72,4 +86,3 @@ if ($result1 && mysqli_num_rows($result1) > 0) {
     // Handle no result found
     echo "No customer found or invalid session data.";
 }
-?>

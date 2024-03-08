@@ -57,4 +57,13 @@ input[type=number]{
     border: 1px solid black;
     min-width:5rem;
     margin-top: 10px;
+}.grid
+a{
+    margin-top: 5px;
+    border: 1px solid black;
+    padding: 15px;
+    border-radius: 20px;
+    color: #212125;
+    background-color: beige;
+    text-decoration: none;
 }

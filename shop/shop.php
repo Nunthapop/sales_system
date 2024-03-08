@@ -27,7 +27,7 @@ include "../header/nav_cus.php";
                     <h3>Type: <?= $row['product_type']; ?></h3>
                     <h3>Price: <?= $row['product_price']; ?></h3>
                     <a href="check_id.php?id=<?php echo $row['product_id']; ?>">Add</a>  <!-- getproductID -->
-                        <input type="submit" value="Add">
+                    
                 </div> <?php } ?>
 
         </div>
