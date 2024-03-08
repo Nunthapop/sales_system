@@ -18,7 +18,7 @@ include "../header/nav_cus.php";
 <?php if(isset($_GET['id'])){
      $p_id = $_GET['id']; 
      $act = $_GET['action']; 
-}
+
 
   
 
@@ -54,7 +54,7 @@ if($act=='remove' && !empty($p_id))  //ยกเลิกการสั่ง�
     unset($_SESSION['cart'][$p_id]);
 }
 
-
+}
 
 ?> 
 
