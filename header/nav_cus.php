@@ -27,6 +27,7 @@ session_start();
              <li> <h1>Scented Serenity</h1></li>
             <li><a href="shop.php">Shop</a></li>
             <li><a href="show.php">Cart</a></li>
+            <li><a href="history.php">History</a></li>
         </ul>
         <?php if(isset($_SESSION['email'])) {?>
             <div class="profile"><a href=" ../login/logout_cus.php">Profile</a></div>
