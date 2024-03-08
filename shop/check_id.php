@@ -13,6 +13,7 @@ echo $p_id;
 </head>
 <body>
     <form action="show.php?id=<?php echo $p_id;?>&action=add" method="post">
+    
 <input type="submit">
 </form>
 </body>

@@ -14,13 +14,12 @@ include "../header/nav_cus.php";
     <div class="title">
         <h1>Cart</h1>
     </div>
-<?php   $p_id = $_GET['id']; 
-$act = $_GET['action']; 
-echo $p_id;
-$sql = "SELECT * FROM product";
-$result = mysqli_query($connect, $sql);
-$row = mysqli_fetch_assoc($result);
-echo $row['product_name'];
+
+<?php if(isset($_GET['id'])){
+     $p_id = $_GET['id']; 
+     $act = $_GET['action']; 
+}
+
   
 
 // if($p_id == 0){
@@ -61,7 +60,7 @@ if($act=='remove' && !empty($p_id))  //ยกเลิกการสั่ง�
 
 <?php 
 if(!empty($_SESSION['cart'])) {
-    // print_r($_SESSION['cart']);
+    print_r($_SESSION['cart']);
     
     $total = 0;
     foreach($_SESSION['cart'] as $p_id=>$qty) {
