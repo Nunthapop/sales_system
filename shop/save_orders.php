@@ -2,13 +2,19 @@
 include "../header/nav_cus.php";
 
 // Assuming $connect is your database connection
-
+$cus_id = $_SESSION['customers_id'];
+// echo  $cus_id;
 $date = date("Y-m-d G:i:s");
+$address_cus = $_POST['address'];
+
+// $query_add = "UPDATE customers
+// SET address = $address_cus where customers_id = '$cus_id'" ;
+// $result_add = mysqli_query($connect, $query_add);
 
 // Make sure total is properly sanitized and validated
 
 
-$cus_id = $_SESSION['customers_id'];
+
 
 $query1 = "SELECT * FROM customers JOIN membership ON customers.membership_id = membership.membership_id WHERE customers_id = $cus_id";
 $result1 = mysqli_query($connect, $query1);
@@ -78,6 +84,7 @@ if ($result1 && mysqli_num_rows($result1) > 0) {
     VALUES 
     ('Cash', '$date',$order_id )";
         $result2 = mysqli_query($connect, $query_invoices);
+        unset($_SESSION['cart']);
     } else {
         // Handle error
         echo "Error: " . mysqli_error($connect);

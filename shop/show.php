@@ -1,5 +1,7 @@
 <?php
 include "../header/nav_cus.php";
+error_reporting(0);
+
 ?>
 <html>
 
@@ -55,7 +57,7 @@ include "../header/nav_cus.php";
     }
 
     ?>
- <form action="confirm_cart.php?id=<?php echo $_SESSION['customer_id']; ?>" method="post">
+<form action="confirm_cart.php?id=<?php echo $_SESSION['customer_id']; ?>" method="post">
     <div class="product">
         <ul>
             <?php
@@ -70,8 +72,8 @@ include "../header/nav_cus.php";
                     $sum = $row['product_price'] * $qty;
                     $total += $sum;
                     ?>
-                    <li>
-                        <?php echo $row['product_name'] ?>
+                    <li> <img src="../image/<?php echo $row['image'] ?>" alt="">
+                        <h2> <?php echo $row['product_name'] ?></h2>
                         <?php echo number_format($sum, 2) ?> ฿
                         <div class="Decrements">
                             <a href="show.php?id=<?php echo $p_id ?>&action=decrement">-</a>
@@ -99,7 +101,10 @@ include "../header/nav_cus.php";
       
     </div>
     <input type="submit" value="Checkout" name="checkout">
-    <li>Total: <?php echo number_format($total, 2) ?> ฿</li>
+    <?php if(!empty($total)) {?>
+          <li>Total: <?php echo number_format($total, 2) ?> ฿</li>
+    <?php }?>
+  
 </form>
 
 
