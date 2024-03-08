@@ -5,7 +5,7 @@ $username = $_POST['name'];
 $password = $_POST['password'];
 
 $_SESSION['email'] = $username;
-$userQuery = "SELECT * FROM customers where cus_first_name = '$username'and password = '$password'";
+$userQuery = "SELECT * FROM customers where email = '$username'and password = '$password'";
 $result = mysqli_query($connect, $userQuery);
 
 if (!$result) {
@@ -18,7 +18,7 @@ if (mysqli_num_rows($result) == 0) {
     $row = mysqli_fetch_assoc($result);
 
     if (
-        ($_POST['email'] == $row['email']) && ($_POST['password'] == $row['password'])
+        ($_POST['name'] == $row['email']) && ($_POST['password'] == $row['password'])
     ) {
         $_SESSION['customers_id'] =  $row['customers_id'];
         $_SESSION['cus_first_name'] = $row['cus_first_name'];
@@ -28,6 +28,7 @@ if (mysqli_num_rows($result) == 0) {
         header("Location: ../shop/shop.php");
     } else {
         $_SESSION['error_msg'] = "username or password is incorrect";
+        echo $_SESSION['error_msg'];
         header("Location: login_cus.php");
     }
 }

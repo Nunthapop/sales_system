@@ -85,6 +85,7 @@ if ($result1 && mysqli_num_rows($result1) > 0) {
     ('Cash', '$date',$order_id )";
         $result2 = mysqli_query($connect, $query_invoices);
         unset($_SESSION['cart']);
+        echo"Thank you";
     } else {
         // Handle error
         echo "Error: " . mysqli_error($connect);

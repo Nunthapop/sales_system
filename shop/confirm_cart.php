@@ -74,7 +74,8 @@ $member_discount = $row1['member_discount'];
             <li><h2>Total</h2> <h2> <?php  echo number_format($total, 2)?> ฿</h2></li> 
             
         </ul>            
-        <?php $_SESSION['$total'] = $total;?>
+        <?php $_SESSION['$total'] = $total;
+        $_SESSION['subtotal'] = $subtotal;?>
                 <div class="address"> 
                     <h2>Address for shipping</h2>
                     <input type="text" name="address"> </div>

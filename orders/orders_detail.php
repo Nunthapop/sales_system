@@ -146,7 +146,7 @@ $result3 = mysqli_query($connect, $query3); ?>
 
                     <?php
                     // Assuming $result contains the database query result
-                    while ($row = mysqli_fetch_assoc($result3)) {
+                    $row = mysqli_fetch_assoc($result3)
                     ?>
                         <?php if ($row['del_status'] == 'Delivered' and $row['status'] !== 'In issued') {
                             $icon = '<i class="fa-solid fa-clipboard-check fa-xl" style="color: #63E6BE;"></i>';
@@ -166,7 +166,7 @@ $result3 = mysqli_query($connect, $query3); ?>
                             <button type='submit' name='del_status' value="<?php echo $row['del_status']; ?>"><?php echo $icon; ?> <?php echo $row['del_status']; ?></button>
                         </div>
                     <?php
-                    } // End of while loop 
+                    // End of while loop 
                     ?>
                 </div>
             </form>
