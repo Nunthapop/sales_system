@@ -21,7 +21,7 @@ include_once "../config/config.php";
 
 <body>
     <div class="parent-box">
-        <?php $query1 = "SELECT * FROM orders";
+        <?php $query1 = "SELECT * FROM orders where orders_id =";
         $result1 = mysqli_query($connect, $query1);
         ?>
         <img src="../image/logo.png">
