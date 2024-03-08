@@ -61,10 +61,11 @@ if($act=='remove' && !empty($p_id))  //ยกเลิกการสั่ง�
 }
 
 ?> 
-
+<form action="confirm_cart.php?id=<?php echo $_SESSION['customer_id']; ?>" method="post">
 <?php 
 if(!empty($_SESSION['cart'])) {
     print_r($_SESSION['cart']);
+    
     
     $total = 0;
     foreach($_SESSION['cart'] as $p_id=>$qty) {
@@ -97,10 +98,11 @@ if(!empty($_SESSION['cart'])) {
 } else {
     echo "<div class='empty'> Ops...Your card is empty!</div>";
 }
+echo $_SESSION['customers_id'];
 ?>
 
      
-        ?>
+        
          <input type="submit" value="checkout" name="checkout"> 
         </form>   
                                        
