@@ -7,7 +7,11 @@ include "../header/nav_cus.php";
     <title>ThaiCreate.Com</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="stylesheet" href="css/show.css">
-
+    <script>
+if ( window.history.replaceState ) {
+  window.history.replaceState( null, null, window.location.href );
+}
+</script>
 </head>
 
 <body>
