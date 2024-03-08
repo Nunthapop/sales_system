@@ -24,7 +24,7 @@ session_start();
         <div class="login">
             <div class="input">
                 <h1>Customer</h1>
-                <label class="username">Email<br></label>
+                <label class="username">Name<br></label>
                 <input type="text" id="username" name="email">
             </div>
             <div class="input">

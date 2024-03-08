@@ -52,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
             <div class="tel"> <label for="email">Telephone:</label>
                 <input type="text" id="email" name="tel" required>
-                <label for="email">Email</label>
+                <label for="email">Name</label>
                 <input type="text" id="email" name="email" required>
             </div>
 
