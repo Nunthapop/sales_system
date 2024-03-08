@@ -11,7 +11,7 @@ include "../header/nav_cus.php";
 </head>
 
 <body>
-    <form action="check_id.php" method="post">
+    <form action="or.php" method="post">
         <?php
         $query = "SELECT * FROM product";
         $result = mysqli_query($connect, $query); ?>
@@ -26,13 +26,14 @@ include "../header/nav_cus.php";
                     <h3><?= $row['product_description']; ?></h3>
                     <h3>Type: <?= $row['product_type']; ?></h3>
                     <h3>Price: <?= $row['product_price']; ?></h3>
-                    <a href="check_id.php?id=<?php echo $row['product_id']; ?>">Add</a>  <!-- getproductID -->
+                    <input type="hidden" name="txtProductID" value="<?php echo $row["product_id"]; ?>" size="2">
+                   <input type="text" min="0"   name="txtQty" value="1" size="2">
                         <input type="submit" value="Add">
                 </div> <?php } ?>
 
         </div>
     </form>
-   
+
 
 </body>
 

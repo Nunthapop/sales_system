@@ -14,70 +14,96 @@ include "../header/nav_cus.php";
     <div class="title">
         <h1>Cart</h1>
     </div>
-
-    <?php
-
-    if (!isset($_SESSION["intLine"])) {
-        echo "Cart empty";
-        exit();
-    }
-
-    ?>
-    <div class="parent">
-        <div class="product">
-            <ul>  
-                
-                <?php
-        $Total = 0;
-        $SumTotal = 0;?>
-        <li>ProductID
-        <?php for ($i = 0; $i <= (int) $_SESSION["intLine"]; $i++) {
-            if ($_SESSION["strProductID"][$i] != "") {
-                $query = "SELECT * FROM product WHERE product_id = '" . $_SESSION["strProductID"][$i] . "' ";
-                $result = mysqli_query($connect, $query);
-                $objResult = mysqli_fetch_array($result);
-                $Total = $_SESSION["strQty"][$i] * $objResult["product_price"];
-                $SumTotal = $SumTotal + $Total;
-        ?>
-                        <?php echo $_SESSION["strProductID"][$i]; ?><input type="hidden" name="txtProductID<?= $i; ?>" value="<?= $_SESSION["strProductID"][$i]; ?>">
-                        <?php echo $objResult["product_name"]; ?>
-                        <?php echo $objResult["product_price"]; ?> 
-                        <?php print_r($_SESSION["strProductID"]); ?>                
-                        <input type="text" name="txtQty<?= $i; ?>" value="<?= $_SESSION['strQty'][$i]; ?>" size="2">                                    
-                        <?php echo number_format($Total, 2); ?>             
-                  <a href="delete.php?Line=<?php echo $i; ?>">x</a>
-                
-        <?php
-                 echo $_SESSION["strProductID"][$i];}
-        }
-        ?>
-                </li>
-              
-             
-            </ul>
-        </div>
-    </div>
-
-   
-      
+<?php   $p_id = $_GET['id']; 
+$act = $_GET['action']; 
+echo $p_id;
+$sql = "SELECT * FROM product";
+$result = mysqli_query($connect, $sql);
+$row = mysqli_fetch_assoc($result);
+echo $row['product_name'];
   
-    Sum Total
-    <?php echo number_format($SumTotal, 2); ?>
-    <br><br><a href="shop.php">Go to Product</a>
-    <?php
-    if ($SumTotal > 0) {
-    ?>
-        | <a href="checkout.php">CheckOut</a>
-    <?php
+
+// if($p_id == 0){
+//   echo "<div class='empty'> Ops...Your card is empty</div>";
+// }
+
+
+if($act=='add' && !empty($p_id))
+{
+    if(isset($_SESSION['cart'][$p_id]))
+    {
+        $_SESSION['cart'][$p_id]++; //post increment  $session[][idที่ add มา] => array (จำนวนที่เรากดใส่ตะกร้า)
     }
-    ?>
+    else
+    {
+        $_SESSION['cart'][$p_id]=1; //จำนวนเริ่มต้นของตะกร้า
+    }
+}
+if($act=='decrement' && !empty($p_id)){
+    if(isset($_SESSION['cart'][$p_id]))
+    {
+        $_SESSION['cart'][$p_id]--;
+    }
+    if($_SESSION['cart'][$p_id] < 1){ //
+        unset($_SESSION['cart'][$p_id]);
+        header("location:show.php?id=0&action=non");
+    }
+}
+
+if($act=='remove' && !empty($p_id))  //ยกเลิกการสั่งซื้อ
+{
+    unset($_SESSION['cart'][$p_id]);
+}
+
+
+
+?> 
+
+<?php 
+if(!empty($_SESSION['cart'])) {
+    print_r($_SESSION['cart']);
+    
+    $total = 0;
+    foreach($_SESSION['cart'] as $p_id=>$qty) {
+        echo $qty;
+        // $query = "SELECT * FROM product where product_id = $p_id";
+        // $result = mysqli_query($connect, $query);
+        // $row = mysqli_fetch_array($result);
+        // $sum = $row['product_price'] * $qty;
+        // $total += $sum;
+?>
+    <div class="product">
+        <div class="grid2">
+            <div class="product-name"><?php echo $row['product_name']?></div>
+            <div class="price"><?php echo number_format($sum,2)?> ฿</div>
+        </div>
+        <div class="grid3">
+            <div class="add">
+                <div class="box-add">
+                    <div class="Decrements"> <a href="show.php?id=<?php echo $p_id ?>&action=decrement">-</a></div>
+                    <div class="qty"><?php echo $qty?></div>
+                    <div class="Increments"><a href="show.php?id=<?php echo $p_id ?>&action=add">+</a></div>
+                </div>
+                <div class="remove"><a href='show.php?id=<?php echo $p_id ?>&action=remove'>Remove</a></div>
+            </div>
+        </div>
+    </div> 
+<?php 
+    }
+} else {
+    echo "<div class='empty'> Ops...Your card is empty!</div>";
+}
+?>
+
+     
+        ?>
+         <input type="submit" value="checkout" name="checkout"> 
+        </form>   
+                                       
+           
+           
+           
 
 </body>
 
 </html>
-<!-- <td width="101">ProductID</td>
-            <td width="82">ProductName</td>
-            <td width="82">Price</td>
-            <td width="79">Qty</td>
-            <td width="79">Total</td>
-            <td width="10">Del</td> -->
