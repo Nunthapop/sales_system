@@ -8,13 +8,14 @@ if (isset($_POST['submit']))
     $tel =$_POST['telephone'];
     $adds =$_POST['address'];
     $mem =$_POST['member_name'];
+    echo $mem;
 
     
+    
 
-    $query = "UPDATE customers join  membership using(membership_id)
+    $query = "UPDATE customers  
     SET cus_first_name='$namef', cus_last_name=' $namel' 
-    ,telephone ='$tel',address ='$adds',member_name='$mem' 
-    
+    ,telephone ='$tel',address ='$adds',membership_id ='$mem' 
     where customers_id = '$id'";
     $result = mysqli_query($connect, $query); 
     

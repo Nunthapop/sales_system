@@ -45,8 +45,8 @@ echo $id;
                             <td><input type="text" value="<?php echo $row['telephone']; ?>" name="telephone"></td>
                             <td><input type="text" value="<?php echo $row['address']; ?>" name="address"></td>
                             <td><select name="member_name">
-                                    <option value="Standard">Standard</option>
-                                    <option value="Premium">Premium </option>
+                                    <option value="1">Standard</option>
+                                    <option value="2">Premium </option>
                                 </select></td>
                             <td><input type="submit" name="submit" value="save">
                                 <input type="reset" name="reset" value="CANCEL">
