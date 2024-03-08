@@ -1,7 +1,7 @@
 <?php
 session_start();
 include_once "../config/config.php";
-$username = $_POST['email'];
+$username = $_POST['name'];
 $password = $_POST['password'];
 
 $_SESSION['email'] = $username;

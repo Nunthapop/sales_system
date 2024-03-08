@@ -32,6 +32,7 @@ $result = mysqli_query($connect, $query); ?>
                 <th>Orders total</th>
                 <th>Status</th>
                 <th>Orders Details</th>
+                <th>Invoices</th>
             </tr>
             <?php while ($row = mysqli_fetch_assoc($result)) { ?>
                 <tr>
@@ -41,7 +42,7 @@ $result = mysqli_query($connect, $query); ?>
                     <td><?php echo $row['orders_total']; ?></td>
                     <td><?php echo $row['status']; ?></td>
                     <td><div class="add"><a href="orders_detail.php?id=<?php echo$row['orders_id'];?>">Detail  </a>
-                    <td><div class="add"><a href="bill.php?id=<?php echo$row['orders_id'];?>">Invoices  </a>
+                    <td><div class="add"><a href="bill.php?id=<?php echo $row['orders_id'];?>">Invoices  </a>
                    
                 </tr>
             <?php } ?>

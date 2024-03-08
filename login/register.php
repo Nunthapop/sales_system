@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $first = $_POST['first'];
     $last = $_POST['last'];
-    $email = $_POST['email'];
+    $name = $_POST['name'];
     $tel = $_POST['tel'];
     $add = $_POST['address'];
     $password = $_POST['password'];
@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     $query = "INSERT INTO customers (cus_first_name, 
     cus_last_name, telephone,address,password,email, membership_id) VALUES 
-    ('$first', '$last', '$tel','$add','$password','$email','$member_id')";
+    ('$first', '$last', '$tel','$add','$password','$name','$member_id')";
 
     if (mysqli_query($connect, $query)) {
         header('Location:../login/login.php');
@@ -53,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="tel"> <label for="email">Telephone:</label>
                 <input type="text" id="email" name="tel" required>
                 <label for="email">Name</label>
-                <input type="text" id="email" name="email" required>
+                <input type="text" id="email" name="name" required>
             </div>
 
             <label for="email">Address</label>

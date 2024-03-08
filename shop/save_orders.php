@@ -41,13 +41,13 @@ if ($result1 && mysqli_num_rows($result1) > 0) {
 
     $total = $subtotal - $dis_price;
 
-    $status = 'In issued';
+    $status = 'Payment complete';
     $del_status = 'Start delivery';
-
+    $total_sql = $_SESSION['$total'];
     $query2 = "INSERT INTO orders 
     (date, orders_total, discount, status, del_status, customers_id,employee_id) 
     VALUES 
-    ('$date', '$total', '$all_discount', '$status', '$del_status', '$cus_id', 1)";
+    ('$date', ' $total_sql', '$all_discount', '$status', '$del_status', '$cus_id', 1)";
     $result2 = mysqli_query($connect, $query2);
 
 

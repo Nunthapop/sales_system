@@ -1,6 +1,6 @@
 <?php
 include_once "../config/config.php";
-
+$or_id = $_GET['id'];
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +21,7 @@ include_once "../config/config.php";
 
 <body>
     <div class="parent-box">
-        <?php $query1 = "SELECT * FROM orders where orders_id =";
+        <?php $query1 = "SELECT * FROM orders where orders_id = $or_id";
         $result1 = mysqli_query($connect, $query1);
         ?>
         <img src="../image/logo.png">
@@ -45,7 +45,8 @@ include_once "../config/config.php";
             </tr>
 
             <?php
-            $query2 = "SELECT * FROM product join orders_detail using (product_id)";
+            $query2 = "SELECT * FROM product join orders_detail using (product_id) join orders using (orders_id)  
+            where orders_id= $or_id";
             $result2 = mysqli_query($connect, $query2);
             while ($row2 = mysqli_fetch_assoc($result2)) { ?>
                 <tr>
