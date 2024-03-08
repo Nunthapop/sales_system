@@ -10,21 +10,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $tel = $_POST['tel'];
     $add = $_POST['address'];
     $password = $_POST['password'];
-    $member = 1;
-    
-    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
+    $member = 1;
+    $query_member = 'SELECT membership_id from membership where member_name ="standard"';
+    $result = mysqli_query($connect, $query_member);
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+    $row = mysqli_fetch_assoc($result);
+    $member_id = $row['membership_id'];
+    
     $query = "INSERT INTO customers (cus_first_name, 
     cus_last_name, telephone,address,password,email, membership_id) VALUES 
-    ('$first', '$last', '$tel','$add','$password','$email','$member')";
+    ('$first', '$last', '$tel','$add','$password','$email','$member_id')";
 
     if (mysqli_query($connect, $query)) {
         header('Location:../login/login.php');
     } else {
         echo "Error: " . $query . "<br>" . mysqli_error($connection);
     }
-
-    
 }
 ?>
 
