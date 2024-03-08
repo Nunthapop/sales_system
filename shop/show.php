@@ -1,6 +1,5 @@
 <?php
 include "../header/nav_cus.php";
-
 ?>
 <html>
 
@@ -56,61 +55,52 @@ include "../header/nav_cus.php";
     }
 
     ?>
-    <form action="confirm_cart.php?id=<?php echo $_SESSION['customer_id']; ?>" method="post">
-        <div class="product">
-            <ul>
-                <?php
-                if (!empty($_SESSION['cart'])) {
-                    $total = 0;
-                    foreach ($_SESSION['cart'] as $p_id => $qty) {
-                        $query = "SELECT * FROM product WHERE product_id = $p_id";
-                        $result = mysqli_query($connect, $query);
-                        $row = mysqli_fetch_array($result);
+ <form action="confirm_cart.php?id=<?php echo $_SESSION['customer_id']; ?>" method="post">
+    <div class="product">
+        <ul>
+            <?php
+            if (!empty($_SESSION['cart'])) {
+                $total = 0;
+                foreach ($_SESSION['cart'] as $p_id => $qty) {
+                    $query = "SELECT * FROM product WHERE product_id = $p_id";
+                    $result = mysqli_query($connect, $query);
+                    $row = mysqli_fetch_array($result);
 
-                        // Calculate the total price for this item
-                        $sum = $row['product_price'] * $qty;
-                        $total += $sum;
-                        ?>
-                        <li> <img src="../image/<?php echo $row['image'] ?>" alt="">
-                            <h2>
-                                <?php echo $row['product_name'] ?>
-                            </h2>
-                            <?php echo number_format($sum, 2) ?> ฿
-                            <div class="Decrements">
-                                <a href="show.php?id=<?php echo $p_id ?>&action=decrement">-</a>
-                            </div>
-                            <div class="qty">
-                                <?php echo $qty ?>
-                            </div>
-                            <div class="Increments">
-                                <a href="show.php?id=<?php echo $p_id ?>&action=add">+</a>
-                            </div>
-                            <div class="remove">
-                                <a href='show.php?id=<?php echo $p_id ?>&action=remove'>Remove</a>
-                            </div>
-                        </li>
-                        <?php
-                    } // End of foreach loop
-                
+                    // Calculate the total price for this item
+                    $sum = $row['product_price'] * $qty;
+                    $total += $sum;
                     ?>
-
+                    <li>
+                        <?php echo $row['product_name'] ?>
+                        <?php echo number_format($sum, 2) ?> ฿
+                        <div class="Decrements">
+                            <a href="show.php?id=<?php echo $p_id ?>&action=decrement">-</a>
+                        </div>
+                        <div class="qty"><?php echo $qty ?></div>
+                        <div class="Increments">
+                            <a href="show.php?id=<?php echo $p_id ?>&action=add">+</a>
+                        </div>
+                        <div class="remove">
+                            <a href='show.php?id=<?php echo $p_id ?>&action=remove'>Remove</a>
+                        </div>
+                    </li>
                     <?php
-                } else {
-                    echo "<div class='empty'> Ops...Your cart is empty!</div>";
-                }
+                } // End of foreach loop
+
                 ?>
-            </ul>
-
-
-        </div>
-        <input type="submit" value="Checkout" name="checkout">
-        <?php if (!empty($total)) { ?>
-            <li>Total:
-                <?php echo number_format($total, 2) ?> ฿
-            </li>
-        <?php } ?>
-
-    </form>
+               
+            <?php
+            } else {
+                echo "<div class='empty'> Ops...Your cart is empty!</div>";
+            }
+            ?>
+        </ul>
+        
+      
+    </div>
+    <input type="submit" value="Checkout" name="checkout">
+    <li>Total: <?php echo number_format($total, 2) ?> ฿</li>
+</form>
 
 
 
