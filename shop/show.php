@@ -1,5 +1,6 @@
 <?php
 include "../header/nav_cus.php";
+error_reporting(0);
 ?>
 <html>
 
@@ -71,7 +72,9 @@ include "../header/nav_cus.php";
                     $total += $sum;
                     ?>
                     <li>
+                        
                         <?php echo $row['product_name'] ?>
+                        <img src="../image/<?php  echo $row['image'];?>" alt="">
                         <?php echo number_format($sum, 2) ?> ฿
                         <div class="Decrements">
                             <a href="show.php?id=<?php echo $p_id ?>&action=decrement">-</a>
